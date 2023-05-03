@@ -39,4 +39,4 @@ SrNo | Name | VLabs Developer or Integration Engineer | Department| Institute
 2 | **Tuhin Chakrabarty** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
 3 | **Bibudhendu Pati** | Developer |  Department of Mechanical Engineering | IIT Kharagpur |
 4 | **Prakriti Dhang** | Developer and Integration |  Department of Mechanical Engineering | IIT Kharagpur | 
-4 | **Saptarshi** | Developer and Integration |  Department of Mechanical Engineering | IIT Kharagpur |
+5 | **Saptarshi** | Developer and Integration |  Department of Mechanical Engineering | IIT Kharagpur |
