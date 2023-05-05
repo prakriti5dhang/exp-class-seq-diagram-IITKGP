@@ -76,6 +76,9 @@ function addbtnt22(){
  if (objsval=="Select sender object"){
     alert("Please select a sending object!");
   } 
+  else if (objrval=="Select receiver object"){
+    alert("Please select a receiving object!");
+  }
   else if (mtval ==0){
     alert("Please select a message type!");
   }
@@ -83,15 +86,15 @@ function addbtnt22(){
   else if(inpt22 == ""){
     alert("Please type in a message sent from source to target object!");
   }
-  else if (objrval=="Select receiver object"){
-    alert("Please select a receiving object!");
-  }
-
- /*else if(mtval==1){
-
- }*/
   
-  else{
+  
+
+ /*if((mtval == 2) || (mtval == 3)){
+    alert("Please select Synchronous message type!");
+ }*/
+
+  
+  else  {
 
     arrmesg.push(inpt22);
     let newtr =document.createElement("tr");
