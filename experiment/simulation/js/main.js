@@ -19,6 +19,7 @@ function subex(){
         document.getElementById("dispres").style.display="block";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
+        document.getElementById("show_result3").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
        
@@ -35,6 +36,7 @@ function subex(){
       document.getElementById("para1").style.display="block";
       document.getElementById("show_result1").style.display="none";
       document.getElementById("show_result2").style.display="none";
+      document.getElementById("show_result3").style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
     

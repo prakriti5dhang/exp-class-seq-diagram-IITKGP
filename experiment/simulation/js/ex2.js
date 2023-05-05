@@ -81,11 +81,16 @@ function addbtnt22(){
   }
  
   else if(inpt22 == ""){
-    alert("Please add message!");
+    alert("Please type in a message sent from source to target object!");
   }
   else if (objrval=="Select receiver object"){
     alert("Please select a receiving object!");
   }
+
+ /*else if(mtval==1){
+
+ }*/
+  
   else{
 
     arrmesg.push(inpt22);
@@ -271,7 +276,7 @@ function drawbtnex2(){
                 strokeWidth: 0
             },
             label: {
-                text: arrsr[0],
+                text: arrmesg[0],
                 fill: 'black',
                 fontSize: 16
             }
@@ -290,7 +295,7 @@ function drawbtnex2(){
                 strokeWidth: 0
             },
             label: {
-                text: arrsr[1],
+                text: arrmesg[1],
                 fill: 'black',
                 fontSize: 16
             }
@@ -308,13 +313,31 @@ function drawbtnex2(){
                strokeWidth: 0
            },
            label: {
-               text: arrsr[2],
+               text: arrmesg[2],
                fill: 'black',
                fontSize: 16
            }
        });
       msg3.addTo(graph);
 
+
+      var arrow = new joint.shapes.standard.Image();
+      arrow.resize(80, 12);
+      arrow.position(184,149);
+  //actor1.position(103, 15);
+  arrow.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+ 
+  arrow.attr('image/xlinkHref', 'images/arrow.png');
+  arrow.addTo(graph);
+
+  var arrow1 = new joint.shapes.standard.Image();
+      arrow1.resize(80, 12);
+      arrow1.position(184,289);
+  //actor1.position(103, 15);
+  arrow1.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+ 
+  arrow1.attr('image/xlinkHref', 'images/arrow.png');
+  arrow1.addTo(graph);
 
         joint.shapes.standard.Link.define('examples.CustomLink', {
             attrs: {
