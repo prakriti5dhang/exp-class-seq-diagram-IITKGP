@@ -79,17 +79,19 @@ function addbtnt22(){
   else if (objrval=="Select receiver object"){
     alert("Please select a receiving object!");
   }
-  else if (mtval ==0){
-    alert("Please select a message type!");
-  }
+  
  
   else if(inpt22 == ""){
     alert("Please type in a message sent from source to target object!");
   }
   
-  
+  else if (mtval ==0){
+    alert("Please select a message type!");
+  }
+ 
 
- /*if((mtval == 2) || (mtval == 3)){
+ 
+/* if((mtval == 2) || (mtval == 3)){
     alert("Please select Synchronous message type!");
  }*/
 
@@ -149,6 +151,8 @@ document.getElementById('tbodyt23').appendChild(newtr);
 }
 
 }
+
+
  
 
 /******************************** Function to remove row *********************************************************/

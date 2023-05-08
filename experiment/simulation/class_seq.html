@@ -141,10 +141,8 @@ Author: 1. Prakriti Dhang
     <li>Identify objects playing a role in the concerned events
       </li>
     <li>Arrange events in tme sequence of their execution
-     
-
     </li>
-    <li>Use of synchronous message and response</li>
+    <li>Use of synchronous message.</li>
    </ul>
   
 <p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment. 
@@ -201,7 +199,7 @@ Author: 1. Prakriti Dhang
     <li>Arranging activities in a logical sequence of their execution
       
       </li>
-    <li>Use of asynchronous messages
+    <li>Use of synchronous messages and response
      
 
     </li>
@@ -358,11 +356,83 @@ Author: 1. Prakriti Dhang
   <div class="card-body">
     <div class="row">
     <div class="col-md-9" >
- <!--  Add table  here as in exercise 2 -->
+      <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Table #1:  Add object</label>
+      <form id="ftbl31"  class="p-1 bg-white " action="">
+      <div class="table-responsive">
+    <table id="tbl31" class="table table-bordered  border border-1 border-info table-stripped">
+      <thead>
+        <th>Object Name (Role)</th>
+        <th>Add</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control border-primary " type="text" id="inp31" ></td>
+          <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button" onclick="addbtnt31()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
+        </tr>
+      </tbody>
+ 
+    </table>
+   </div> <!-- table 1 responsive div ended for exercise 3-->
+</form>
+
+<label for="table32" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed between objects</label>
+<form id="ftbl32"  class="p-1 bg-white " action="">
+<div class="table-responsive">
+<table id="tbl32" class="table table-bordered  border border-1 border-info table-stripped">
+<thead>
+  <th>Object (Sender)</th>
+  <th>Message Type</th>
+  <th>Message</th>
+  <th>Object (Receiver)</th>
+  <th>Add</th>
+</thead>
+<tbody>
+  <tr>
+    <td> <select id="selectobjs3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
+      <option value="0" selected>Select sender object</option></select></td>
+    <td>
+      <select id="selectmsgtyp3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
+        <option value="0" selected>Select message type</option>
+        <option value="SYNC" >Synchronous message</option>
+        <option value="ASYNC" >Asynchronous message</option>
+        <option value="RESP" >Response</option>
+
+      </select>
+    </td>
+    <td><input class="form-control border-primary " type="text" id="inp32" ></td>
+    <td>
+      <select id="selectobjr3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
+        <option value="0" selected>Select receiver object</option></select>
+    </td>
+    <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button" onclick="addbtnt32()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
+  </tr>
+</tbody>
+
+</table>
+</div> <!-- table 2 responsive div ended for exercise 2-->
+</form>
+
+<label for="table33" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
+<form id="ftbl33"  class="p-1 bg-white " action="">
+<div class="table-responsive">
+<table id="tbl33" class="table table-bordered  border border-1 border-info table-stripped">
+<thead>
+  <th>Object (Sender)</th>
+  <th>Message Type</th>
+  <th>Message</th>
+  <th>Object (Receiver)</th>
+  <th>Remove</th>
+</thead>
+<tbody id="tbodyt33">
+  
+</tbody>
+
+</table>
+</div> <!-- table 3 responsive div ended for exercise 2-->
+</form>
 
 
-
-      <button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtex3()" ><i class="bi bi-pencil-fill"></i>Draw</button> 
+      <button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtnex3()" ><i class="bi bi-pencil-fill"></i>Draw</button> 
 <div id="seq_diag_ex3">
 
 </div>
@@ -377,7 +447,7 @@ Author: 1. Prakriti Dhang
 
 				<div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
   <div class="card-body">
-	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result</label>
+	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Solution</label>
    <div style="font-size: medium;" id="show_result1"  style=" display: none;" >
    
   <img src="./images/" class="img-fluid"  alt="class-diagram-solution">
