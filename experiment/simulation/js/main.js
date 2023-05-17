@@ -34,7 +34,7 @@ function subex(){
       document.getElementById("ex1").style.display="none"; 
       document.getElementById("exercise3").style.display="none";    
       document.getElementById("ex3").style.display="none";  
-      document.getElementById("dispres").style.display="block";
+      document.getElementById("dispres").style.display="none";
       document.getElementById("para1").style.display="block";
       document.getElementById("show_result1").style.display="none";
       document.getElementById("show_result2").style.display="none";
@@ -53,7 +53,7 @@ function subex(){
     document.getElementById("ex1").style.display="none"; 
     document.getElementById("exercise2").style.display="none";
     document.getElementById("ex2").style.display="none"; 
-    document.getElementById("dispres").style.display="block";
+    document.getElementById("dispres").style.display="none";
     document.getElementById("para1").style.display="block";
     document.getElementById("show_result1").style.display="none";
     document.getElementById("show_result2").style.display="none";
@@ -90,6 +90,7 @@ function subex(){
 /* Submit button to directly view the solution*/
 
 function viewsolutionb(){
+  document.getElementById("dispres").style.display="block";
     document.getElementById("viewsol").disabled=false;
     document.getElementById("dispviewbtn").disabled=true;
 
