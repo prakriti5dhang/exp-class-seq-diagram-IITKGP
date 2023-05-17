@@ -32,7 +32,7 @@ Author:
 /*************************************************** Function for  Draw UML **************************************************/
 
 function drawbtnex1(){
-
+    document.getElementById("dispuml1").style.display="block";
     var namespace = joint.shapes;
   
           var graph = new joint.dia.Graph({}, { cellNamespace: namespace });

@@ -164,7 +164,7 @@ document.getElementById("inp31").value="";
 
 /***************************************************  Function for Draw UML **************************************************/
      function drawbtnex3(){
- 
+        document.getElementById("dispuml3").style.display="block";
 
         var namespace = joint.shapes;
       

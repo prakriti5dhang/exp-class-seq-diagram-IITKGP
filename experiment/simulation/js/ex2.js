@@ -170,7 +170,7 @@ function removerow(btndel) {
 
 /*************************************************** Function for Draw UML **************************************************/
 function drawbtnex2(){
- 
+    document.getElementById("dispuml2").style.display="block";
 
   var namespace = joint.shapes;
 
