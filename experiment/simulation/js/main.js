@@ -16,7 +16,7 @@ function subex(){
         document.getElementById("exercise3").style.display="none";    
         document.getElementById("ex3").style.display="none";  
         document.getElementById("para1").style.display="block";    
-        document.getElementById("dispres").style.display="block";
+        document.getElementById("dispres").style.display="none";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
         document.getElementById("show_result3").style.display="none";
