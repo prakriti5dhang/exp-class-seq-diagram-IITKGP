@@ -8,511 +8,576 @@ Author: 1. Prakriti Dhang
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.2/joint.css" />
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.2/joint.css" />
 
 
 
-   
+
 </head>
-<body >
+
+<body>
   <header id="header">
     <div class="container-fluid p-3 ">
       <div class="card">
-      <div class="row">
-        <div class="col-md-2">
-        <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo" >
+        <div class="row">
+          <div class="col-md-2">
+            <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo">
+          </div>
+          <div class="col-md-8 p-4">
+            <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
+          </div>
+          <div class="col-md-2">
+            <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo">
+          </div>
+        </div>
       </div>
-      <div class="col-md-8 p-4">
-        <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
-      </div>
-      <div class="col-md-2">
-        <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo" >
-      </div>
-      </div>
-    </div>
     </div>
   </header>
- 
+
   <div class="container-fluid p-2 ">
-<hr>
-    <p class="h3 fw-bold fst-italic text-center" style="color: #000283;">Modeling UML Class Diagrams and Sequence diagrams</p>
- <hr>
-</div>
+    <hr>
+    <p class="h3 fw-bold fst-italic text-center" style="color: #000283;">Modeling UML Class Diagrams and Sequence
+      diagrams</p>
+    <hr>
+  </div>
 
-	<div class="container-fluid mt-2 p-3">
-		
-        <div class="d-flex flex-column justify-content-center mb-3 ">  
-				
+  <div class="container-fluid mt-2 p-3">
 
-<div class="card border border-2 border-primary p-2">
-  <div class="card-body">
-	<label class="form-label fw-bold fs-5">Select a problem from the dropdown list shown below</label>
-   <select id="selectex" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-  <option value="0" selected>Exercise #</option>
-  <option value="1">Class Diagram</option>
-  <option value="2">Sequence Diagram 1</option>
-  <option value="3">Sequence Diagram 2</option>
-  
-</select>
-<br>
-<p class="fw-bold fs-6" id="para1" style="display: none;">Click submit to view solution</p>
-<button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn" onclick="viewsolutionb()" disabled>Submit</button>
-
-  </div> <!-- card body ended for select exercise div-->
-</div> <!-- card ended for select exercise div-->
+    <div class="d-flex flex-column justify-content-center mb-3 ">
 
 
-  
+      <div class="card border border-2 border-primary p-2">
+        <div class="card-body">
+          <label class="form-label fw-bold fs-5">Select a problem from the dropdown list shown below</label>
+          <select id="selectex" class="form-select float-center border border-2 border-primary"
+            aria-label="Default select example" onchange="subex()">
+            <option value="0" selected>Exercise #</option>
+            <option value="1">Class Diagram</option>
+            <option value="2">Sequence Diagram 1</option>
+            <option value="3">Sequence Diagram 2</option>
 
-		
-			<!----------------------------------------Problem Statement Exercise 1-------------------------------------->
+          </select>
+          <br>
+          <p class="fw-bold fs-6" id="para1" style="display: none;">Click submit to view solution</p>
+          <button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn"
+            onclick="viewsolutionb()" disabled>Submit</button>
 
-				<div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
-  <div class="card-body">
-	<label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;" >Draw a class diagram to graphically represent the following workflow</label>
-  
-   <p class="fs-6" style="text-align: justify;" >A web browser is a software that helps us access a resource (web page) 
-    available on the World Wide Web and identified by a URL. A web browser consists of different sub-components, 
-    which can be primarily categorized into <b>browser rendering engine</b>, and <b>browser control</b>.</p>
-
-   <p class="fs-6" style="text-align: justify;" >The rendering engine is responsible for displaying a requested 
-    page in the web browser. The rendering engine itself is quite a complex piece of software, which knows how to 
-    display a web page based on the HTML elements present in the page, and CSS rules defined (if any). Today browsers 
-    are not only limited to displaying text and images, but can provide access to audio and video components also.
-  </p>
-
-  <p class="fs-6" style="text-align: justify;" >The web browser control, too, consists of several sub-components 
-    including <b>navigation, window control, event handlers, page display</b>. The navigation control aids users to
-     request for web pages (resources) by specifying a URL, navigate to other resources through internal and 
-     external hyperlinks, move across pages visited earlier. Event handlers are responsible to identify the kind of 
-     activity that user is trying to do, and perform it. For example, when a user clicks on a hyperlink, event handlers 
-     identify the URL of the target resource, and delegates loading of the resource to other components. A resource that
-      has been retrieved by the web browser is then displayed in its page display area. Window control, in association
-       with the rendering engine, helps in controlling various aspects of page display like changing font-size, resolution,
-        and so on, apart from resizing or closing the window.
-  </p>
-
-  <p class="fs-6" style="text-align: justify;" >Represent the above problem with a class diagram. In particular</p>
-<ul>
- <li>Represent the individual classes</li> 
-  <li>Represent how browser rendering engine, and browser control are related to web browser class</li>
-  <li>Add methods that let a web browser retrieve a resource from the web server, and convince yourself</li>
-</ul>
-
-  <h6 class="fs-6 fw-bold">Learning Objectives:</h6>
-  <ol class="fs-6">
-   <li>Problem formulation in an object-oriented manner by identifying relevant classes
-   
-     </li>
-   <li> Modeling behaviour of classes
-   
-   </li>
-   <li> Associating different classes in the system to get meaningful work done</li>
-  </ol>
- 
-<p class="fs-6"><b>Limitations:</b> All possible features of a class diagram could not be implemented here. 
-  Also, auto-generation of code from the class diagram is not possible here.</p>
-
-
-</div> <!-- card body ended for exercise 1 problem statment-->
-</div> <!-- card ended for exercise 1 problem statement-->
-
-
-
-<!----------------------------------------Problem Statement Exercise 1 complete-------------------------------------->
-
-<!----------------------------------------Problem Statement Exercise 2-------------------------------------->
-
-<div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
-  <div class="card-body">
-	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;" >Draw a sequence diagram to graphically represent the following workflow</label>
-  
-   <p class="fs-6" style="text-align: justify;" >How would you represent the three-way handshaking mechanism of TCP with a sequence diagram?
-   </p>
-   <h6 class="fw-bold">Learning Objectives:</h6>
-   <ul class="fs-6">
-    <li>Identify objects playing a role in the concerned events
-      </li>
-    <li>Arrange events in tme sequence of their execution
-    </li>
-    <li>Use of synchronous message.</li>
-   </ul>
-  
-<p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment. 
-  One can't depict alternate flows or loops. 
-  Lifeline activation / deactivation / destroy couldn't be represented here.</p>
+        </div> <!-- card body ended for select exercise div-->
+      </div> <!-- card ended for select exercise div-->
 
 
 
 
 
-</div> <!-- card body ended for exercise 2 problem statment-->
-</div> <!-- card ended for exercise 2 problem statement-->
+      <!----------------------------------------Problem Statement Exercise 1-------------------------------------->
+
+      <div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
+        <div class="card-body">
+          <label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">Draw
+            a class diagram to graphically represent the following workflow</label>
+
+          <p class="fs-6" style="text-align: justify;">A web browser is a software that helps us access a resource (web
+            page)
+            available on the World Wide Web and identified by a URL. A web browser consists of different sub-components,
+            which can be primarily categorized into <b>browser rendering engine</b>, and <b>browser control</b>.</p>
+
+          <p class="fs-6" style="text-align: justify;">The rendering engine is responsible for displaying a requested
+            page in the web browser. The rendering engine itself is quite a complex piece of software, which knows how
+            to
+            display a web page based on the HTML elements present in the page, and CSS rules defined (if any). Today
+            browsers
+            are not only limited to displaying text and images, but can provide access to audio and video components
+            also.
+          </p>
+
+          <p class="fs-6" style="text-align: justify;">The web browser control, too, consists of several sub-components
+            including <b>navigation, window control, event handlers, page display</b>. The navigation control aids users
+            to
+            request for web pages (resources) by specifying a URL, navigate to other resources through internal and
+            external hyperlinks, move across pages visited earlier. Event handlers are responsible to identify the kind
+            of
+            activity that user is trying to do, and perform it. For example, when a user clicks on a hyperlink, event
+            handlers
+            identify the URL of the target resource, and delegates loading of the resource to other components. A
+            resource that
+            has been retrieved by the web browser is then displayed in its page display area. Window control, in
+            association
+            with the rendering engine, helps in controlling various aspects of page display like changing font-size,
+            resolution,
+            and so on, apart from resizing or closing the window.
+          </p>
+
+          <p class="fs-6" style="text-align: justify;">Represent the above problem with a class diagram. In particular
+          </p>
+          <ul>
+            <li>Represent the individual classes</li>
+            <li>Represent how browser rendering engine, and browser control are related to web browser class</li>
+            <li>Add methods that let a web browser retrieve a resource from the web server, and convince yourself</li>
+          </ul>
+
+          <h6 class="fs-6 fw-bold">Learning Objectives:</h6>
+          <ol class="fs-6">
+            <li>Problem formulation in an object-oriented manner by identifying relevant classes
+
+            </li>
+            <li> Modeling behaviour of classes
+
+            </li>
+            <li> Associating different classes in the system to get meaningful work done</li>
+          </ol>
+
+          <p class="fs-6"><b>Limitations:</b> All possible features of a class diagram could not be implemented here.
+            Also, auto-generation of code from the class diagram is not possible here.</p>
+
+
+        </div> <!-- card body ended for exercise 1 problem statment-->
+      </div> <!-- card ended for exercise 1 problem statement-->
 
 
 
-<!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 1 complete-------------------------------------->
 
+      <!----------------------------------------Problem Statement Exercise 2-------------------------------------->
 
-<!----------------------------------------Problem Statement Exercise 3-------------------------------------->
+      <div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
+        <div class="card-body">
+          <label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">Draw
+            a sequence diagram to graphically represent the following workflow</label>
 
-<div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
-  <div class="card-body">
-	<label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;" >Draw a sequence diagram to graphically represent the following workflow</label>
-  
-   <p class="fs-6" style="text-align: justify;" >The Web traditionally worked in a client-server model, where a web browser would send a HTTP request 
-    to the web server, and the server would send back a HTTP response to the browser. The HTTP request
-     actually encapsulates the contents of the requested resource in some format. In cases where access 
-     to a resource is restricted or say, it requires a user authentication, the HTTP request encapsulates 
-     the login credentials and sends to the server. The server then checks with the database server if the 
-     credentials are correct. The status of verification is then send back to the browser.</p>
+          <p class="fs-6" style="text-align: justify;">How would you represent the three-way handshaking mechanism of
+            TCP with a sequence diagram?
+          </p>
+          <h6 class="fw-bold">Learning Objectives:</h6>
+          <ul class="fs-6">
+            <li>Identify objects playing a role in the concerned events
+            </li>
+            <li>Arrange events in tme sequence of their execution
+            </li>
+            <li>Use of synchronous message.</li>
+          </ul>
 
-     <p class="fs-6" style="text-align: justify;" >
-   In the recent years there has been a shift from the traditional way of how HTTP works. 
-   A new technique has been proposed, popularly know as AJAX, that lets asynchronous communication 
-   between a browser and web server. In traditional model, the browser used to send a HTTP request, 
-   and then wait for a HTTP response. The next HTTP request was usually sent after getting response from the server.</p>
-   
-   <p class="fs-6" style="text-align: justify;" >
-   AJAX, however, lets a web browser to send multiple HTTP requests one after another, without waiting 
-   until a response is received. This approach is found to be very helpful in cases when contents of only a 
-   portion of the web page has to be updated, rather than refreshing the entire page. Web 2.0 uses AJAX in many 
-   different cases for better user experience.</p>
-
-   <p class="fs-6">From the above problem statement</p>
-<ol>
-  <li>How would you represent the traditional Web with a sequence diagram (in both cases when user verification is
-    required or not)</li>
-  <li>What changes would appear in your sequence diagram if you are trying model a scenario where AJAX is being used?</li>
-</ol>
-   
-  
-   <p class="fs-6 fw-bold">Learning Objectives:</p>
-   <ul class="fs-6">
-    <li>Arranging activities in a logical sequence of their execution
-      
-      </li>
-    <li>Use of synchronous messages and response
-     
-
-    </li>
-    <li>Use of synchronous message and response</li>
-   </ul>
-  
-<p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment. 
-  One can't depict alternate flows or loops. 
-  Lifeline activation / deactivation / destroy couldn't be represented here.</p>
+          <p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment.
+            One can't depict alternate flows or loops.
+            Lifeline activation / deactivation / destroy couldn't be represented here.</p>
 
 
 
-</div> <!-- card body ended for exercise 3 problem statment-->
-</div> <!-- card ended for exercise 3 problem statement-->
+
+
+        </div> <!-- card body ended for exercise 2 problem statment-->
+      </div> <!-- card ended for exercise 2 problem statement-->
 
 
 
-<!----------------------------------------Problem Statement Exercise 3 complete-------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
 
 
-	<!------------------------------------------Exercise 1 -------------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 3-------------------------------------->
 
-<div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
-  <div class="card-body">
-    <div class="row">
-    <div class="col-md-9" >
-      <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #1:   Add a class</label>
-      <form id="ftbl1"  class="p-1 bg-white " action="">
-      <div class="table-responsive">
-    <table id="tbl1" class="table table-bordered  border border-1 border-info table-stripped">
-      <thead>
-        <th>Class Name</th>
-        <th>Add</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input class="form-control border-primary " type="text" id="inp1" ></td>
-          <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button" onclick="addbtnt1()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-        </tr>
-      </tbody>
- 
-    </table>
-   </div> <!-- table 1 responsive div ended for exercise 1-->
-</form>
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" ><i class="bi bi-pencil-fill"></i> Draw</button>
-</div>
-</div>
-</div>
-</div>
-<div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
-  <div class="card-body">
-<div id="class_diag_ex1">
+      <div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
+        <div class="card-body">
+          <label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">Draw
+            a sequence diagram to graphically represent the following workflow</label>
 
-</div>
-</div>
-</div>
+          <p class="fs-6" style="text-align: justify;">The Web traditionally worked in a client-server model, where a
+            web browser would send a HTTP request
+            to the web server, and the server would send back a HTTP response to the browser. The HTTP request
+            actually encapsulates the contents of the requested resource in some format. In cases where access
+            to a resource is restricted or say, it requires a user authentication, the HTTP request encapsulates
+            the login credentials and sends to the server. The server then checks with the database server if the
+            credentials are correct. The status of verification is then send back to the browser.</p>
+
+          <p class="fs-6" style="text-align: justify;">
+            In the recent years there has been a shift from the traditional way of how HTTP works.
+            A new technique has been proposed, popularly know as AJAX, that lets asynchronous communication
+            between a browser and web server. In traditional model, the browser used to send a HTTP request,
+            and then wait for a HTTP response. The next HTTP request was usually sent after getting response from the
+            server.</p>
+
+          <p class="fs-6" style="text-align: justify;">
+            AJAX, however, lets a web browser to send multiple HTTP requests one after another, without waiting
+            until a response is received. This approach is found to be very helpful in cases when contents of only a
+            portion of the web page has to be updated, rather than refreshing the entire page. Web 2.0 uses AJAX in many
+            different cases for better user experience.</p>
+
+          <p class="fs-6">From the above problem statement</p>
+          <ol>
+            <li>How would you represent the traditional Web with a sequence diagram (in both cases when user
+              verification is
+              required or not)</li>
+            <li>What changes would appear in your sequence diagram if you are trying model a scenario where AJAX is
+              being used?</li>
+          </ol>
+
+
+          <p class="fs-6 fw-bold">Learning Objectives:</p>
+          <ul class="fs-6">
+            <li>Arranging activities in a logical sequence of their execution
+
+            </li>
+            <li>Use of synchronous messages and response
+
+
+            </li>
+            <li>Use of synchronous message and response</li>
+          </ul>
+
+          <p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment.
+            One can't depict alternate flows or loops.
+            Lifeline activation / deactivation / destroy couldn't be represented here.</p>
 
 
 
-<!------------------------------------------Exercise 2 -------------------------------------------->
+        </div> <!-- card body ended for exercise 3 problem statment-->
+      </div> <!-- card ended for exercise 3 problem statement-->
 
-<div class="card border border-2 border-success p-2" id="ex2" style="display:none
+
+
+      <!----------------------------------------Problem Statement Exercise 3 complete-------------------------------------->
+
+
+      <!------------------------------------------Exercise 1 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+              <!------------------------------------------------ Table 1  ---------------------------------------------->
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add a class</label>
+                <div class="table-responsive">
+                  <table id="tbl1" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Class Name</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp1"></td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt1()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 1-->
+
+              </form> <!-- table 1 form ended for exercise 1-->
+
+              <!----------------------------------------------- Table 2 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 3 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 4 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 5 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 6 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 7 -------------------------------------------------------->
+
+              <!----------------------------------------------- Table 8 -------------------------------------------------------->
+
+
+              <button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()"><i
+                  class="bi bi-pencil-fill"></i> Draw</button>
+            </div> <!-- Column  ended for exercise 1-->
+          </div> <!-- row  ended for exercise 1-->
+        </div> <!-- card body ended for exercise 1-->
+      </div> <!-- card  ended for exercise 1-->
+      <div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <div id="class_diag_ex1">
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!------------------------------------------Exercise 2 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex2" style="display:none
 ;">
-  <div class="card-body">
-    <div class="row">
-    <div class="col-md-10" >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-10">
 
-      <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Table #1:  Add object</label>
-      <form id="ftbl21"  class="p-1 bg-white " action="">
-      <div class="table-responsive">
-    <table id="tbl21" class="table table-bordered  border border-1 border-info table-stripped">
-      <thead>
-        <th>Object Name (Role)</th>
-        <th>Add</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input class="form-control border-primary " type="text" id="inp21" ></td>
-          <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button" onclick="addbtnt21()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-        </tr>
-      </tbody>
- 
-    </table>
-   </div> <!-- table 1 responsive div ended for exercise 2-->
-</form>
+              <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add object</label>
+              <form id="ftbl21" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl21" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object Name (Role)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp21"></td>
+                        <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt21()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
 
-<label for="table22" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed between objects</label>
-<form id="ftbl22"  class="p-1 bg-white " action="">
-<div class="table-responsive">
-<table id="tbl22" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>Object (Sender)</th>
-  <th>Message Type</th>
-  <th>Message</th>
-  <th>Object (Receiver)</th>
-  <th>Add</th>
-</thead>
-<tbody>
-  <tr>
-    <td> <select id="selectobjs" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-      <option value="0" selected>Select sender object</option></select></td>
-    <td>
-      <select id="selectmsgtyp" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-        <option value="0" selected>Select message type</option>
-        <option value="SYNC" >Synchronous message</option>
-        <option value="ASYNC" >Asynchronous message</option>
-        <option value="RESP" >Response</option>
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 2-->
+              </form>
 
-      </select>
-    </td>
-    <td><input class="form-control border-primary " type="text" id="inp22" ></td>
-    <td>
-      <select id="selectobjr" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-        <option value="0" selected>Select receiver object</option></select>
-    </td>
-    <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button" onclick="addbtnt22()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-  </tr>
-</tbody>
+              <label for="table22" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed
+                between objects</label>
+              <form id="ftbl22" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl22" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> <select id="selectobjs" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select sender object</option>
+                          </select></td>
+                        <td>
+                          <select id="selectmsgtyp" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select message type</option>
+                            <option value="SYNC">Synchronous message</option>
+                            <option value="ASYNC">Asynchronous message</option>
+                            <option value="RESP">Response</option>
 
-</table>
-</div> <!-- table 2 responsive div ended for exercise 2-->
-</form>
+                          </select>
+                        </td>
+                        <td><input class="form-control border-primary " type="text" id="inp22"></td>
+                        <td>
+                          <select id="selectobjr" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select receiver object</option>
+                          </select>
+                        </td>
+                        <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt22()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
 
-<label for="table23" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
-<form id="ftbl23"  class="p-1 bg-white " action="">
-<div class="table-responsive">
-<table id="tbl23" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>Object (Sender)</th>
-  <th>Message Type</th>
-  <th>Message</th>
-  <th>Object (Receiver)</th>
-  <th>Remove</th>
-</thead>
-<tbody id="tbodyt23">
-  
-</tbody>
+                  </table>
+                </div> <!-- table 2 responsive div ended for exercise 2-->
+              </form>
 
-</table>
-</div> <!-- table 3 responsive div ended for exercise 2-->
-</form>
+              <label for="table23" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
+              <form id="ftbl23" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl23" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Remove</th>
+                    </thead>
+                    <tbody id="tbodyt23">
 
+                    </tbody>
 
-      <button id="drawbtn2" class="btn btn-primary" type="button" onclick="drawbtnex2()" ><i class="bi bi-pencil-fill"></i> Draw</button>
-    </div>
-  </div>
-  </div>
-  </div>
-  <div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
-    <div class="card-body">
-<div id="seq_diag_ex2">
-
-</div>
-
-</div>
-</div>
-
-<!------------------------------------------Exercise 3 -------------------------------------------->
-
-<div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
-  <div class="card-body">
-    <div class="row">
-    <div class="col-md-9" >
-      <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Table #1:  Add object</label>
-      <form id="ftbl31"  class="p-1 bg-white " action="">
-      <div class="table-responsive">
-    <table id="tbl31" class="table table-bordered  border border-1 border-info table-stripped">
-      <thead>
-        <th>Object Name (Role)</th>
-        <th>Add</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input class="form-control border-primary " type="text" id="inp31" ></td>
-          <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button" onclick="addbtnt31()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-        </tr>
-      </tbody>
- 
-    </table>
-   </div> <!-- table 1 responsive div ended for exercise 3-->
-</form>
-
-<label for="table32" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed between objects</label>
-<form id="ftbl32"  class="p-1 bg-white " action="">
-<div class="table-responsive">
-<table id="tbl32" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>Object (Sender)</th>
-  <th>Message Type</th>
-  <th>Message</th>
-  <th>Object (Receiver)</th>
-  <th>Add</th>
-</thead>
-<tbody>
-  <tr>
-    <td> <select id="selectobjs3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-      <option value="0" selected>Select sender object</option></select></td>
-    <td>
-      <select id="selectmsgtyp3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-        <option value="0" selected>Select message type</option>
-        <option value="SYNC" >Synchronous message</option>
-        <option value="ASYNC" >Asynchronous message</option>
-        <option value="RESP" >Response</option>
-
-      </select>
-    </td>
-    <td><input class="form-control border-primary " type="text" id="inp32" ></td>
-    <td>
-      <select id="selectobjr3" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-        <option value="0" selected>Select receiver object</option></select>
-    </td>
-    <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button" onclick="addbtnt32()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-  </tr>
-</tbody>
-
-</table>
-</div> <!-- table 2 responsive div ended for exercise 2-->
-</form>
-
-<label for="table33" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
-<form id="ftbl33"  class="p-1 bg-white " action="">
-<div class="table-responsive">
-<table id="tbl33" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>Object (Sender)</th>
-  <th>Message Type</th>
-  <th>Message</th>
-  <th>Object (Receiver)</th>
-  <th>Remove</th>
-</thead>
-<tbody id="tbodyt33">
-  
-</tbody>
-
-</table>
-</div> <!-- table 3 responsive div ended for exercise 2-->
-</form>
-<button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtnex3()" ><i class="bi bi-pencil-fill"></i> Draw</button> 
-</div>
-</div>
-</div>
-</div>
-<div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
-  <div class="card-body">
-<div id="seq_diag_ex3">
-
-</div>
-</div>
-</div>
+                  </table>
+                </div> <!-- table 3 responsive div ended for exercise 2-->
+              </form>
 
 
-  <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
+              <button id="drawbtn2" class="btn btn-primary" type="button" onclick="drawbtnex2()"><i
+                  class="bi bi-pencil-fill"></i> Draw</button>
+            </div> <!-- Column  ended for exercise 2-->
+          </div> <!-- row  ended for exercise 2-->
+        </div> <!-- card body ended for exercise 2-->
+      </div> <!-- card  ended for exercise 2-->
+      <div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <div id="seq_diag_ex2">
+
+          </div>
+
+        </div>
+      </div>
+
+      <!------------------------------------------Exercise 3 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+              <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add object</label>
+              <form id="ftbl31" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl31" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object Name (Role)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp31"></td>
+                        <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt31()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 3-->
+              </form>
+
+              <label for="table32" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed
+                between objects</label>
+              <form id="ftbl32" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl32" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> <select id="selectobjs3" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select sender object</option>
+                          </select></td>
+                        <td>
+                          <select id="selectmsgtyp3" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select message type</option>
+                            <option value="SYNC">Synchronous message</option>
+                            <option value="ASYNC">Asynchronous message</option>
+                            <option value="RESP">Response</option>
+
+                          </select>
+                        </td>
+                        <td><input class="form-control border-primary " type="text" id="inp32"></td>
+                        <td>
+                          <select id="selectobjr3" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" onchange="subex()">
+                            <option value="0" selected>Select receiver object</option>
+                          </select>
+                        </td>
+                        <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt32()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 2 responsive div ended for exercise 2-->
+              </form>
+
+              <label for="table33" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
+              <form id="ftbl33" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl33" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Remove</th>
+                    </thead>
+                    <tbody id="tbodyt33">
+
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 3 responsive div ended for exercise 2-->
+              </form>
+              <button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtnex3()"><i
+                  class="bi bi-pencil-fill"></i> Draw</button>
+            </div> <!-- Column  ended for exercise 3-->
+          </div> <!-- row  ended for exercise 3-->
+        </div> <!-- card body ended for exercise 3-->
+      </div> <!-- card  ended for exercise 3-->
+      <div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <div id="seq_diag_ex3">
+
+          </div>
+        </div>
+      </div>
 
 
-				<div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
-  <div class="card-body">
-	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Solution</label>
-   <div style="font-size: medium;" id="show_result1"  style=" display: none;" >
-   
-  <img src="./images/" class="img-fluid"  alt="class-diagram-solution">
-  
+      <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
 
 
- 
-</div>
-<div style="font-size: medium;" id="show_result2"  style=" display: none;" >
-   
-  <img src="./images/solution-2.png" class="img-fluid"  alt="sequence-diagram-solution">
-  
+      <div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
+        <div class="card-body">
+          <label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Solution</label>
+          <div style="font-size: medium;" id="show_result1" style=" display: none;">
+
+            <img src="./images/" class="img-fluid" alt="class-diagram-solution">
 
 
- 
-</div>
-<div style="font-size: medium;" id="show_result3"  style=" display: none;" >
-   
-  <img src="./images/" class="img-fluid"  alt="sequence-diagram-solution">
-  
 
 
- 
-</div>
-<br>
-<button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
-</div> <!-- Card body ended for result display-->
-</div> <!-- Card  ended for result display-->
+          </div>
+          <div style="font-size: medium;" id="show_result2" style=" display: none;">
 
-			
-			
-</div> <!--- d-Flex ended-->
+            <img src="./images/solution-2.png" class="img-fluid" alt="sequence-diagram-solution">
+
+
+
+
+          </div>
+          <div style="font-size: medium;" id="show_result3" style=" display: none;">
+
+            <img src="./images/" class="img-fluid" alt="sequence-diagram-solution">
+
+
+
+
+          </div>
+          <br>
+          <button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View
+            Solution</button>
+        </div> <!-- Card body ended for result display-->
+      </div> <!-- Card  ended for result display-->
+
+
+
+    </div> <!--- d-Flex ended-->
   </div> <!-- container-fluid ended-->
 
-  
+
   <div class="container-fluid p-1 ">
     <hr>
-  <footer class="text-white text-center" >
-    
-      <p class="text-primary fs-5 text-center" >  Copyright  © 2023  IIT Kharagpur, <a class="text-primary fs-5 text-center " href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a></p>
-   
-  </footer>
-  <hr>
+    <footer class="text-white text-center">
+
+      <p class="text-primary fs-5 text-center"> Copyright © 2023 IIT Kharagpur, <a
+          class="text-primary fs-5 text-center " href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a></p>
+
+    </footer>
+    <hr>
   </div>
-    
-  
-   
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/ex1.js"></script>
-    <script src="./js/ex2.js"></script>
-    <script src="./js/ex3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/ex1.js"></script>
+  <script src="./js/ex2.js"></script>
+  <script src="./js/ex3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>
 </body>
+
 </html>
