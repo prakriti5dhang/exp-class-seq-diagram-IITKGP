@@ -164,9 +164,254 @@ document.getElementById("inp31").value="";
 
 /***************************************************  Function for Draw UML **************************************************/
      function drawbtnex3(){
+
+
+
         document.getElementById("dispuml3").style.display="block";
 
-        var namespace = joint.shapes;
+
+
+        var Click ="Click";
+        var ele1a = document.getElementById('element-1a'),
+          ele1b = document.getElementById('element-1b');
+        
+          var ele2a = document.getElementById('element-2a'),
+          ele2b = document.getElementById('element-2b');
+        
+          var ele3a = document.getElementById('element-3a'),
+          ele3b = document.getElementById('element-3b');
+        
+        
+          var ele4a = document.getElementById('element-4a'),
+          ele4b = document.getElementById('element-4b');
+        
+        
+          var ele5a = document.getElementById('element-5a'),
+          ele5b = document.getElementById('element-5b');
+        
+        
+          var ele6a = document.getElementById('element-6a'),
+          ele6b = document.getElementById('element-6b');
+        
+        
+          var clicka = document.getElementById('element-clicka'),
+          clickb = document.getElementById('element-clickb');
+        
+          var clicka2 = document.getElementById('element-clicka2'),
+          clickb2 = document.getElementById('element-clickb2');
+        
+          var clicka3 = document.getElementById('element-clicka3'),
+          clickb3 = document.getElementById('element-clickb3');
+        
+          var httpreq = document.getElementById('elehttpreq'),
+          httpres = document.getElementById('elehttpres'),
+          upd = document.getElementById('eleupdate');
+          upd2 = document.getElementById('eleupdate2');
+        
+        
+          var httpreq3 = document.getElementById('elehttpreq3'),
+          httpres3 = document.getElementById('elehttpres3');
+          
+          var eleuid = document.getElementById('eleuid'),
+          elelogin = document.getElementById('elelogin');
+        
+          var eleuid4 = document.getElementById('eleuid4'),
+          elelogin4 = document.getElementById('elelogin4');
+        
+          var elehttpreqa = document.getElementById('elehttpreqa'),
+          elehttpresa = document.getElementById('elehttpresa'),
+          eleup3 = document.getElementById('eleup3');
+          eleup4 = document.getElementById('eleup4');
+         
+          var elehttpreq3a = document.getElementById('elehttpreq3a'),
+          elehttpres3a = document.getElementById('elehttpres3a');
+        
+          var elehttpreqb = document.getElementById('elehttpreqb'),
+          elehttpresb = document.getElementById('elehttpresb'),
+          eleup5 = document.getElementById('eleup5');
+          eleup6 = document.getElementById('eleup6');
+         
+          var elehttpreq3b = document.getElementById('elehttpreq3b'),
+          elehttpres3b = document.getElementById('elehttpres3b');
+        
+          var eleret3a = document.getElementById('eleret3a'),
+          eleres3b = document.getElementById('eleres3b');
+        
+          var eleret3c = document.getElementById('eleret3c'),
+          eleres3d = document.getElementById('eleres3d');
+        
+          var eleret5a = document.getElementById('eleret5a'),
+          eleres5b = document.getElementById('eleres5b');
+        
+          var eleret6a = document.getElementById('eleret6a'),
+          eleres6b = document.getElementById('eleres6b');
+        
+        
+        
+          /* new LeaderLine(startElement, endElement, {
+          startPlugColor: '#1a6be0',
+          endPlugColor: '#1efdaa',
+          gradient: true
+        }); */
+        
+        //new LeaderLine(startElement, endElement, {dash: true});
+        new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind',
+        
+        
+        });
+        new LeaderLine(ele2a, ele2b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        new LeaderLine(ele3a, ele3b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        new LeaderLine(ele4a, ele4b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        new LeaderLine(ele5a, ele5b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        new LeaderLine(ele6a, ele6b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        
+        //new LeaderLine(clicka, clickb, {color: 'red', size: 2});
+        //new LeaderLine(clicka, clickb, {color: 'red', size: 2,});
+        
+         new LeaderLine(clicka, clickb, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(clicka3, clickb3, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black'})
+          
+        });
+        
+        
+        
+        new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
+         
+          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, 
+         
+          middleLabel: LeaderLine.captionLabel("User ID + Password", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("Login Status", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+        new LeaderLine(elehttpreqa, elehttpreq3a, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(elehttpres3a, elehttpresa, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+        
+        new LeaderLine(eleup3, eleup4, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
+         
+          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(elehttpreqb, elehttpreq3b, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(elehttpres3b, elehttpresb, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+        
+        new LeaderLine(eleup5, eleup6, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
+         
+          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+        new LeaderLine(eleret3a, eleret5a, {color: 'black', size: 2, 
+         
+          middleLabel: LeaderLine.captionLabel("Retrieve Resource", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(eleres5b, eleres3b, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("Resource", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(eleret3c, eleret6a, {color: 'black', size: 2, 
+         
+          middleLabel: LeaderLine.captionLabel("Retrieve Resource", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        new LeaderLine(eleres6b, eleres3d, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel("Resource", {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+        document.getElementById('element-1a').innerHTML="User";
+        document.getElementById('element-1b').innerHTML="User";
+        
+         document.getElementById('element-2a').innerHTML="Web Browser";
+        document.getElementById('element-2b').innerHTML="Web Browser";
+        
+          document.getElementById('element-3a').innerHTML="Web Server";
+         document.getElementById('element-3b').innerHTML="Web Server";
+        
+        
+          document.getElementById('element-4a').innerHTML="Database";
+         document.getElementById('element-4b').innerHTML="Database";
+        
+        
+          document.getElementById('element-5a').innerHTML="Resource 1";
+         document.getElementById('element-5b').innerHTML="Resource 1";
+        
+        
+          document.getElementById('element-6a').innerHTML="Resource 2";
+          document.getElementById('element-6b').innerHTML="Resource 2";
+        
+
+    
+    }
+
+
+       /* var namespace = joint.shapes;
       
               var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
       
@@ -489,7 +734,7 @@ document.getElementById("inp31").value="";
               //strokeDasharray: '4 2',
               sourceMarker: { 
                  'type': 'path',
-                 'd':'M 0 70  L 140 70 L 0 70  ',
+                 
                  //'dy': 70
              },
              targetMarker: { 
@@ -498,9 +743,9 @@ document.getElementById("inp31").value="";
                'stroke-width': 2,
                'fill': 'black',
               // 'd': 'M 0 70 l 165 0 Z',
-               'd': 'M 10 -5 0 0 10 5  Z ',
+              // 'd': 'M 10 -5 0 0 10 5  Z ',
               // 'd':'M 0 0 L 10 5 L 0 10 Z'
-               
+              'd':'M 0 180  L 140 180 L 0 180  ',
               // 'd':'M 0 70  L 165 70 L 0 70  ', 
               
                //'dy': -70
@@ -510,6 +755,112 @@ document.getElementById("inp31").value="";
          });
          linkc1.addTo(graph);
 
+
+         var linkc12 = new joint.shapes.standard.Link();
+        linkc12.source(link1);
+        linkc12.target(link2);
+         linkc12.attr({
+           line: {
+          //   strokeWidth: 2,
+              //strokeDasharray: '4 2',
+              sourceMarker: { 
+                 'type': 'path',
+                 
+                 //'dy': 70
+             },
+             targetMarker: { 
+               
+              'type': 'path',
+               'stroke-width': 2,
+               'fill': 'black',
+             
+              'd':'M 0 -120  L 140 -120 L 0 -120  ',
+             
+           }
+           
+       }
+         });
+         linkc12.addTo(graph);
+
+
+
+         var linkc23 = new joint.shapes.standard.Link();
+         linkc23.source(link2);
+         linkc23.target(link3);
+          linkc23.attr({
+            line: {
+           //   strokeWidth: 2,
+               //strokeDasharray: '4 2',
+               sourceMarker: { 
+                  'type': 'path',
+                  
+                  //'dy': 70
+              },
+              targetMarker: { 
+                
+               'type': 'path',
+                'stroke-width': 2,
+                'fill': 'black',
+              
+               'd':'M 0 160  L 148 160 L 0 160  ',
+              
+            }
+            
+        }
+          });
+          linkc23.addTo(graph);
+
+          var linkc32 = new joint.shapes.standard.Link();
+         linkc32.source(link2);
+         linkc32.target(link3);
+          linkc32.attr({
+            line: {
+           //   strokeWidth: 2,
+               //strokeDasharray: '4 2',
+               sourceMarker: { 
+                  'type': 'path',
+                  
+                  //'dy': 70
+              },
+              targetMarker: { 
+                
+               'type': 'path',
+                'stroke-width': 2,
+                'fill': 'black',
+              
+               'd':'M 0 100  L 148 100 L 0 100  ',
+              
+            }
+            
+        }
+          });
+          linkc32.addTo(graph);
+
+          var linkc22 = new joint.shapes.standard.Link();
+         linkc22.source(link2);
+         linkc22.target(link2);
+          linkc22.attr({
+            line: {
+           //   strokeWidth: 2,
+               //strokeDasharray: '4 2',
+               sourceMarker: { 
+                  'type': 'path',
+                  
+                  //'dy': 70
+              },
+              targetMarker: { 
+                
+               'type': 'path',
+                'stroke-width': 2,
+                'fill': 'black',
+              
+               
+              
+            }
+            
+        }
+          });
+          linkc22.addTo(graph);
 
          var linkc35 = new joint.shapes.standard.Link();
          linkc35.source(link3);
@@ -539,18 +890,20 @@ document.getElementById("inp31").value="";
 
 
           var linkc53 = new joint.shapes.standard.Link();
-         linkc53.source(link5);
-         linkc53.target(link3);
+          linkc53.source(link3);
+         linkc53.target(link5);
           linkc53.attr({
             line: {
            strokeWidth: 2,
-            strokeDasharray: '4 2',
+            
               
               targetMarker: { 
                 
                'type': 'path',
+               'strokeDasharray': '4 2',
                 'stroke-width': 2,
                 'fill': 'black',
+                'd':'M 0 -30  L 268 -30 L 0 -30  ',
                // 'd': 'M 0 70 l 165 0 Z',
                 //'d': 'M 10 -5 0 0 10 5  Z ',
                // 'd':'M 0 0 L 10 5 L 0 10 Z'
@@ -593,13 +946,13 @@ document.getElementById("inp31").value="";
          }
            });
            linkc36.addTo(graph);
-
+*/
 
 
 
 
       
-      }
+      
       
            
       
