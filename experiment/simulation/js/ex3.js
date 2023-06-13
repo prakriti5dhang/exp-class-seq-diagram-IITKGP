@@ -197,22 +197,22 @@ document.getElementById("inp31").value="";
           ele4b = document.getElementById('element-4b');
         
         
-          var ele5a = document.getElementById('element-5a'),
-          ele5b = document.getElementById('element-5b');
+          //var ele5a = document.getElementById('element-5a'),
+         // ele5b = document.getElementById('element-5b');
         
         
-          var ele6a = document.getElementById('element-6a'),
-          ele6b = document.getElementById('element-6b');
+         // var ele6a = document.getElementById('element-6a'),
+        //  ele6b = document.getElementById('element-6b');
         
         
           var clicka = document.getElementById('element-clicka'),
           clickb = document.getElementById('element-clickb');
         
-          var clicka2 = document.getElementById('element-clicka2'),
-          clickb2 = document.getElementById('element-clickb2');
+     //     var clicka2 = document.getElementById('element-clicka2'),
+      //    clickb2 = document.getElementById('element-clickb2');
         
-          var clicka3 = document.getElementById('element-clicka3'),
-          clickb3 = document.getElementById('element-clickb3');
+        //  var clicka3 = document.getElementById('element-clicka3'),
+         // clickb3 = document.getElementById('element-clickb3');
         
           var httpreq = document.getElementById('elehttpreq'),
           httpres = document.getElementById('elehttpres'),
@@ -229,7 +229,7 @@ document.getElementById("inp31").value="";
           var eleuid4 = document.getElementById('eleuid4'),
           elelogin4 = document.getElementById('elelogin4');
         
-          var elehttpreqa = document.getElementById('elehttpreqa'),
+        /*  var elehttpreqa = document.getElementById('elehttpreqa'),
           elehttpresa = document.getElementById('elehttpresa'),
           eleup3 = document.getElementById('eleup3'),
           eleup4 = document.getElementById('eleup4');
@@ -255,23 +255,19 @@ document.getElementById("inp31").value="";
           eleres5b = document.getElementById('eleres5b');
         
           var eleret6a = document.getElementById('eleret6a'),
-          eleres6b = document.getElementById('eleres6b');
+          eleres6b = document.getElementById('eleres6b');*/
         
         
         
        /*************************************** Creating line stroke between the objects ***************************************/
-        new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind',
-        
-        
-        });
+        new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         new LeaderLine(ele2a, ele2b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         new LeaderLine(ele3a, ele3b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         new LeaderLine(ele4a, ele4b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele5a, ele5b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele6a, ele6b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        //new LeaderLine(ele5a, ele5b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        //new LeaderLine(ele6a, ele6b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         
-        //new LeaderLine(clicka, clickb, {color: 'red', size: 2});
-        //new LeaderLine(clicka, clickb, {color: 'red', size: 2,});
+        
         
          new LeaderLine(clicka, clickb, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
@@ -312,7 +308,7 @@ document.getElementById("inp31").value="";
           
         });
         
-        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
+     /*   new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[6], {color: 'black', offset: [0, 50]})
           
@@ -395,7 +391,7 @@ document.getElementById("inp31").value="";
           middleLabel: LeaderLine.captionLabel(arrmesg3[17], {color: 'black', offset: [0, 50]})
           
         });
-        
+        */
        
         
        /*********************************************** Object name *****************************************************/
@@ -414,12 +410,12 @@ document.getElementById("inp31").value="";
          document.getElementById('element-4b').innerHTML=arrsr3[3];
         
         
-          document.getElementById('element-5a').innerHTML=arrsr3[4];
+         /* document.getElementById('element-5a').innerHTML=arrsr3[4];
          document.getElementById('element-5b').innerHTML=arrsr3[4];
         
         
           document.getElementById('element-6a').innerHTML=arrsr3[5];
-          document.getElementById('element-6b').innerHTML=arrsr3[5];
+          document.getElementById('element-6b').innerHTML=arrsr3[5];*/
         
 
     
