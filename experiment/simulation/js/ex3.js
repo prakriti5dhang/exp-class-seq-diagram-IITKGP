@@ -273,32 +273,32 @@ document.getElementById("inp31").value="";
         //new LeaderLine(clicka, clickb, {color: 'red', size: 2});
         //new LeaderLine(clicka, clickb, {color: 'red', size: 2,});
         
-         new LeaderLine(clicka, clickb, {color: 'black', size: 2,
+         new LeaderLine(clicka, clickb, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[0], {color: 'black', offset: [0, 50]})
           
         });
         
-        new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2,
+        new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[1], {color: 'black', offset: [0, 50]})
         
       });
 
-      new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, 
+      new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[2], {color: 'black', offset: [0, 50]})
         
       });
       
-      new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true,
+      new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
        
         middleLabel: LeaderLine.captionLabel(arrmesg3[3], {color: 'black', offset: [0, 50]})
         
       });
        
         
-        new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true,
+        new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[4], {color: 'black'})
           
@@ -312,26 +312,26 @@ document.getElementById("inp31").value="";
           
         });
         
-        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2,
+        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[6], {color: 'black', offset: [0, 50]})
           
         });
 
 
-        new LeaderLine(elehttpreqa, elehttpreq3a, {color: 'black', size: 2,
+        new LeaderLine(elehttpreqa, elehttpreq3a, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[7], {color: 'black', offset: [0, 50]})
         
       });
         
-        new LeaderLine(eleret3a, eleret5a, {color: 'black', size: 2, 
+        new LeaderLine(eleret3a, eleret5a, {color: 'black', size: 2,  startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[8], {color: 'black', offset: [0, 50]})
           
         });
         
-        new LeaderLine(eleres5b, eleres3b, {color: 'black', size: 2, dash:true,
+        new LeaderLine(eleres5b, eleres3b, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[9], {color: 'black', offset: [0, 50]})
           
@@ -339,7 +339,7 @@ document.getElementById("inp31").value="";
         
        
         
-        new LeaderLine(elehttpres3a, elehttpresa, {color: 'black', size: 2, dash:true,
+        new LeaderLine(elehttpres3a, elehttpresa, {color: 'black', size: 2, startSocket: 'left', endSocket: 'right',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[10], {color: 'black', offset: [0, 50]})
           
@@ -353,7 +353,7 @@ document.getElementById("inp31").value="";
           
         });
         
-        new LeaderLine(clicka3, clickb3, {color: 'black', size: 2,
+        new LeaderLine(clicka3, clickb3, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[12], {color: 'black', offset: [0, 50]})
           
@@ -363,26 +363,26 @@ document.getElementById("inp31").value="";
        
         
         
-        new LeaderLine(elehttpreqb, elehttpreq3b, {color: 'black', size: 2,
+        new LeaderLine(elehttpreqb, elehttpreq3b, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[13], {color: 'black', offset: [0, 50]})
           
         });
 
-        new LeaderLine(eleret3c, eleret6a, {color: 'black', size: 2, 
+        new LeaderLine(eleret3c, eleret6a, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[14], {color: 'black', offset: [0, 50]})
         
       });
       
-      new LeaderLine(eleres6b, eleres3d, {color: 'black', size: 2, dash:true,
+      new LeaderLine(eleres6b, eleres3d, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
        
         middleLabel: LeaderLine.captionLabel(arrmesg3[15], {color: 'black', offset: [0, 50]})
         
       });
       
         
-        new LeaderLine(elehttpres3b, elehttpresb, {color: 'black', size: 2, dash:true,
+        new LeaderLine(elehttpres3b, elehttpresb, {color: 'black', size: 2, startSocket: 'left', endSocket: 'right',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[16], {color: 'black', offset: [0, 50]})
           
