@@ -127,7 +127,7 @@ document.getElementById("inp31").value="";
  var newIconbtn = document.createElement("btn");
  newIconbtn.setAttribute("type","button");
  newIconbtn.setAttribute("class","btn btn-danger");
- newIconbtn.setAttribute("onclick", "removerow(this)");
+ newIconbtn.setAttribute("onclick", "removerow3(this)");
  newIconbtn.setAttribute("style","cursor:pointer;");
  
         
@@ -159,7 +159,18 @@ document.getElementById("inp31").value="";
  
  }
    
-   
+ function removerow3(btndel) {
+  if (typeof(btndel) == "object") {
+      $(btndel).closest("tr").remove();
+      arrmesg3.pop();
+  } 
+ 
+
+  else {
+     return false;
+  }
+}
+
     
 
 /***************************************************  Function for Draw UML **************************************************/
@@ -171,7 +182,7 @@ document.getElementById("inp31").value="";
 
 
 
-        var Click ="Click";
+       
         var ele1a = document.getElementById('element-1a'),
           ele1b = document.getElementById('element-1b');
         
@@ -205,7 +216,7 @@ document.getElementById("inp31").value="";
         
           var httpreq = document.getElementById('elehttpreq'),
           httpres = document.getElementById('elehttpres'),
-          upd = document.getElementById('eleupdate');
+          upd = document.getElementById('eleupdate'),
           upd2 = document.getElementById('eleupdate2');
         
         
@@ -220,7 +231,7 @@ document.getElementById("inp31").value="";
         
           var elehttpreqa = document.getElementById('elehttpreqa'),
           elehttpresa = document.getElementById('elehttpresa'),
-          eleup3 = document.getElementById('eleup3');
+          eleup3 = document.getElementById('eleup3'),
           eleup4 = document.getElementById('eleup4');
          
           var elehttpreq3a = document.getElementById('elehttpreq3a'),
@@ -228,7 +239,7 @@ document.getElementById("inp31").value="";
         
           var elehttpreqb = document.getElementById('elehttpreqb'),
           elehttpresb = document.getElementById('elehttpresb'),
-          eleup5 = document.getElementById('eleup5');
+          eleup5 = document.getElementById('eleup5'),
           eleup6 = document.getElementById('eleup6');
          
           var elehttpreq3b = document.getElementById('elehttpreq3b'),
@@ -248,13 +259,7 @@ document.getElementById("inp31").value="";
         
         
         
-          /* new LeaderLine(startElement, endElement, {
-          startPlugColor: '#1a6be0',
-          endPlugColor: '#1efdaa',
-          gradient: true
-        }); */
-        
-        //new LeaderLine(startElement, endElement, {dash: true});
+       /*************************************** Creating line stroke between the objects ***************************************/
         new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind',
         
         
@@ -270,31 +275,32 @@ document.getElementById("inp31").value="";
         
          new LeaderLine(clicka, clickb, {color: 'black', size: 2,
          
-          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
-          
-        });
-        
-        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2,
-         
-          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
-          
-        });
-        
-        new LeaderLine(clicka3, clickb3, {color: 'black', size: 2,
-         
-          middleLabel: LeaderLine.captionLabel(Click, {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[0], {color: 'black', offset: [0, 50]})
           
         });
         
         new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2,
          
-          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
-          
-        });
+        middleLabel: LeaderLine.captionLabel(arrmesg3[1], {color: 'black', offset: [0, 50]})
+        
+      });
+
+      new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, 
+         
+        middleLabel: LeaderLine.captionLabel(arrmesg3[2], {color: 'black', offset: [0, 50]})
+        
+      });
+      
+      new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true,
+       
+        middleLabel: LeaderLine.captionLabel(arrmesg3[3], {color: 'black', offset: [0, 50]})
+        
+      });
+       
         
         new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true,
          
-          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black'})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[4], {color: 'black'})
           
         });
         
@@ -302,32 +308,40 @@ document.getElementById("inp31").value="";
         
         new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
          
-          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[5], {color: 'black', offset: [0, 50]})
           
         });
         
-        new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, 
+        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2,
          
-          middleLabel: LeaderLine.captionLabel("User ID + Password", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[6], {color: 'black', offset: [0, 50]})
           
         });
-        
-        new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true,
-         
-          middleLabel: LeaderLine.captionLabel("Login Status", {color: 'black', offset: [0, 50]})
-          
-        });
-        
-        
+
+
         new LeaderLine(elehttpreqa, elehttpreq3a, {color: 'black', size: 2,
          
-          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
+        middleLabel: LeaderLine.captionLabel(arrmesg3[7], {color: 'black', offset: [0, 50]})
+        
+      });
+        
+        new LeaderLine(eleret3a, eleret5a, {color: 'black', size: 2, 
+         
+          middleLabel: LeaderLine.captionLabel(arrmesg3[8], {color: 'black', offset: [0, 50]})
           
         });
+        
+        new LeaderLine(eleres5b, eleres3b, {color: 'black', size: 2, dash:true,
+         
+          middleLabel: LeaderLine.captionLabel(arrmesg3[9], {color: 'black', offset: [0, 50]})
+          
+        });
+        
+       
         
         new LeaderLine(elehttpres3a, elehttpresa, {color: 'black', size: 2, dash:true,
          
-          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[10], {color: 'black', offset: [0, 50]})
           
         });
         
@@ -335,19 +349,42 @@ document.getElementById("inp31").value="";
         
         new LeaderLine(eleup3, eleup4, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
          
-          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[11], {color: 'black', offset: [0, 50]})
           
         });
+        
+        new LeaderLine(clicka3, clickb3, {color: 'black', size: 2,
+         
+          middleLabel: LeaderLine.captionLabel(arrmesg3[12], {color: 'black', offset: [0, 50]})
+          
+        });
+        
+        
+       
+        
         
         new LeaderLine(elehttpreqb, elehttpreq3b, {color: 'black', size: 2,
          
-          middleLabel: LeaderLine.captionLabel("HTTP request", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[13], {color: 'black', offset: [0, 50]})
           
         });
+
+        new LeaderLine(eleret3c, eleret6a, {color: 'black', size: 2, 
+         
+        middleLabel: LeaderLine.captionLabel(arrmesg3[14], {color: 'black', offset: [0, 50]})
+        
+      });
+      
+      new LeaderLine(eleres6b, eleres3d, {color: 'black', size: 2, dash:true,
+       
+        middleLabel: LeaderLine.captionLabel(arrmesg3[15], {color: 'black', offset: [0, 50]})
+        
+      });
+      
         
         new LeaderLine(elehttpres3b, elehttpresb, {color: 'black', size: 2, dash:true,
          
-          middleLabel: LeaderLine.captionLabel("HTTP response", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[16], {color: 'black', offset: [0, 50]})
           
         });
         
@@ -355,56 +392,34 @@ document.getElementById("inp31").value="";
         
         new LeaderLine(eleup5, eleup6, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
          
-          middleLabel: LeaderLine.captionLabel("Update display", {color: 'black', offset: [0, 50]})
+          middleLabel: LeaderLine.captionLabel(arrmesg3[17], {color: 'black', offset: [0, 50]})
           
         });
         
+       
         
-        new LeaderLine(eleret3a, eleret5a, {color: 'black', size: 2, 
-         
-          middleLabel: LeaderLine.captionLabel("Retrieve Resource", {color: 'black', offset: [0, 50]})
-          
-        });
+       /*********************************************** Object name *****************************************************/
         
-        new LeaderLine(eleres5b, eleres3b, {color: 'black', size: 2, dash:true,
-         
-          middleLabel: LeaderLine.captionLabel("Resource", {color: 'black', offset: [0, 50]})
-          
-        });
+        document.getElementById('element-1a').innerHTML=arrsr3[0];
+        document.getElementById('element-1b').innerHTML=arrsr3[0];
         
-        new LeaderLine(eleret3c, eleret6a, {color: 'black', size: 2, 
-         
-          middleLabel: LeaderLine.captionLabel("Retrieve Resource", {color: 'black', offset: [0, 50]})
-          
-        });
+         document.getElementById('element-2a').innerHTML=arrsr3[1];
+        document.getElementById('element-2b').innerHTML=arrsr3[1];
         
-        new LeaderLine(eleres6b, eleres3d, {color: 'black', size: 2, dash:true,
-         
-          middleLabel: LeaderLine.captionLabel("Resource", {color: 'black', offset: [0, 50]})
-          
-        });
+          document.getElementById('element-3a').innerHTML=arrsr3[2];
+         document.getElementById('element-3b').innerHTML=arrsr3[2];
         
         
-        document.getElementById('element-1a').innerHTML="User";
-        document.getElementById('element-1b').innerHTML="User";
-        
-         document.getElementById('element-2a').innerHTML="Web Browser";
-        document.getElementById('element-2b').innerHTML="Web Browser";
-        
-          document.getElementById('element-3a').innerHTML="Web Server";
-         document.getElementById('element-3b').innerHTML="Web Server";
+          document.getElementById('element-4a').innerHTML=arrsr3[3];
+         document.getElementById('element-4b').innerHTML=arrsr3[3];
         
         
-          document.getElementById('element-4a').innerHTML="Database";
-         document.getElementById('element-4b').innerHTML="Database";
+          document.getElementById('element-5a').innerHTML=arrsr3[4];
+         document.getElementById('element-5b').innerHTML=arrsr3[4];
         
         
-          document.getElementById('element-5a').innerHTML="Resource 1";
-         document.getElementById('element-5b').innerHTML="Resource 1";
-        
-        
-          document.getElementById('element-6a').innerHTML="Resource 2";
-          document.getElementById('element-6b').innerHTML="Resource 2";
+          document.getElementById('element-6a').innerHTML=arrsr3[5];
+          document.getElementById('element-6b').innerHTML=arrsr3[5];
         
 
     
