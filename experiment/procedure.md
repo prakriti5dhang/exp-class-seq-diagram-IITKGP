@@ -30,13 +30,11 @@ Following are the instructions specifically for this experiment:
 
 
 #### **Steps for Drawing Sequence Diagram** 
-1. Read the problem statement carefully and choose the work space specified for Sequence diagram.
-2. Identify an object that will appear on top portion of the diagram, and write its name in the left textbox of **‘Table #1’**. Click the adjacent ‘Add’ button to add this object. Repeat this for all the possible objects.
+1. Select Sequence Diagram 1 or Sequence Diagram 2 from the drop down and read the problem statement carefully. 
+2. Identify an object from the problem statement, and write its name in the textbox of **‘Table #1’**. Click the adjacent ‘Add’ button to add this object. Repeat this for all the possible objects.
 3. **‘Table #2’** lets you define messages between any two objects. Select the sender object from the first dropdown list, the receiver from the third drop down list. Select one message type from the second dropdown list. Write the text for the message name to the adjacent textbox. Click on the **’Add’** button at the right side to add this message passing. Repeat this for all the possible messages passed from one object to another.
 
 **NOTE** 
  
-1. For the exercise of class diagram, give the name of classes in **‘Table #1’** by using alphabets only.
-2. For the exercise of class diagram, give the name of any attributes in **‘Table #2’** by using alphabets only.
-3. For the exercise of class diagram, give the name of any operations in **‘Table #3’** by using alphabets only.
-4. After updating your inputs click **’Draw’** button to see your last updated diagram.
+1. For the exercise of sequence diagram, add all the possible messages passed fom one object to another.
+2. After updating all your inputs click **’Draw’** button to see the diagram.

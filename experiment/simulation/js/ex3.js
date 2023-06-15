@@ -20,7 +20,7 @@ if(inpt31 == ""){
 
 else{
 
-    arrsr3.push(inpt31);
+   // arrsr3.push(inpt31);
  /******* Creating options in table 2********/
  let newOptionID3a;
  newOptionID3a = 'newOption3a_' + inpt31;
@@ -70,7 +70,8 @@ document.getElementById("inp31").value="";
   
   var selobjs3= document.getElementById("selectobjs3");
   var objsval3 =selobjs3.options[selobjs3.selectedIndex].text;
- 
+  //var objsval3= input_value3.match(/[a-zA-Z]/g);
+  
   var selobjmt3= document.getElementById("selectmsgtyp3");
   var mtval3 =selobjmt3.options[selobjmt3.selectedIndex].value;
  
@@ -104,7 +105,7 @@ document.getElementById("inp31").value="";
  
    
    else  {
- 
+    arrsr3.push(objsval3);
      arrmesg3.push(inpt32);
      let newtr =document.createElement("tr");
      let newtdIDs= "objs"+objsval3;
@@ -153,7 +154,32 @@ document.getElementById("inp31").value="";
  newtr.appendChild(newtdm);
  newtr.appendChild(newtdr);
  newtr.appendChild(newtdbtn);
- document.getElementById('tbodyt33').appendChild(newtr);
+
+ if((objsval3.toLowerCase()=="user") && (objrval3.toLowerCase()=="web browser") && (mtval3 == "SYNC")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+ else if((objsval3.toLowerCase()=="web browser") && (objrval3.toLowerCase()=="web server") && (mtval3 == "SYNC")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+ else if((objsval3.toLowerCase()=="web server") && (objrval3=="database") && (mtval3 == "SYNC")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+
+ else if((objsval3.toLowerCase()=="database") && (objrval3.toLowerCase()=="web server") && (mtval3 == "RESP")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+
+ else if((objsval3.toLowerCase()=="web server") && (objrval3.toLowerCase()=="web browser") && (mtval3 == "RESP")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+
+ else if((objsval3.toLowerCase()=="web browser") && (objrval3.toLowerCase()=="web browser") && (mtval3 == "SYNC")){
+  document.getElementById('tbodyt33').appendChild(newtr);
+ }
+ else{
+  alert("Not possible between " +objsval3 +" and " +objrval3 );
+ }
+ //document.getElementById('tbodyt33').appendChild(newtr);
  
  }
  
@@ -308,7 +334,8 @@ document.getElementById("inp31").value="";
           
         });
         
-     /*   new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
+     /*
+        new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[6], {color: 'black', offset: [0, 50]})
           
