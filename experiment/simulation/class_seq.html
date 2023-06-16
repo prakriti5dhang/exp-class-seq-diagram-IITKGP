@@ -66,6 +66,17 @@ Author: 1. Prakriti Dhang
 
           </select>
           <br>
+          <select id="selectpart" class="form-select float-center border border-2 border-primary"
+          aria-label="Default select example" onchange="subpart()" style="display: none;">
+         
+          <option value="1" selected>1. How would you represent the traditional Web with a sequence diagram when user
+            verification is
+            required </option>
+          <option value="2">2. What changes would appear in your sequence diagram if you are trying model a scenario where AJAX is
+            being used?</option>
+         
+        </select>
+          <br>
           <p class="fw-bold fs-6" id="para1" style="display: none;">Click submit to view solution</p>
           <button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn"
             onclick="viewsolutionb()" disabled>Submit</button>
@@ -210,24 +221,24 @@ Author: 1. Prakriti Dhang
 
           <p class="fs-6">From the above problem statement</p>
           <ol>
-            <li>How would you represent the traditional Web with a sequence diagram (in both cases when user
+            <li>How would you represent the traditional Web with a sequence diagram when user
               verification is
-              required or not)</li>
+              required </li>
             <li>What changes would appear in your sequence diagram if you are trying model a scenario where AJAX is
               being used?</li>
           </ol>
-
-
+          
+         
+<br>
           <p class="fs-6 fw-bold">Learning Objectives:</p>
           <ul class="fs-6">
             <li>Arranging activities in a logical sequence of their execution
 
             </li>
             <li>Use of synchronous messages and response
-
-
             </li>
-
+            <li>Use of synchronous, asynchronous messages and response
+            </li>
           </ul>
 
           <p class="fs-6"><b>Limitations:</b> Only simple sequence diagrams could be represented in this experiment.
@@ -415,6 +426,14 @@ Author: 1. Prakriti Dhang
       <div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
         <div class="card-body">
           <div class="row">
+           
+            <div class="col-md-4">
+          
+        </div>
+        </div>
+        <br>
+          <div class="row">
+           
             <div class="col-md-10">
               <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add object</label>
               <form id="ftbl31" class="p-1 bg-white " action="">
@@ -505,18 +524,18 @@ Author: 1. Prakriti Dhang
         </div> <!-- card body ended for exercise 3-->
       </div> <!-- card  ended for exercise 3-->
       <div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
-        <div class="card-body">
-          <div id="seq_diag_ex3">
+        <!--div class="card-body"-->
+          <div id="seq_diag_ex3" style="display:none;">
             <div class="container text-center text-dark">
               <div class="row">
                 <div class="col-md-2 ">
-                  <div id="element-1a" class="primary p-1 my-3 border border-2 border-dark">element-1a</div>
+                  <div id="element-1a" class="primary p-1 my-3 border border-2 border-dark" >element-1a</div>
 
                   <span id="element-clicka"
                     class="primary p-0  "></span><br>
                   <span id="element-clicka2" class="primary p-0  "></span><br>
                   <span id="element-clicka3" class="primary p-0  "></span><br><br><br><br><br><br><br><br><br>
-                  <div id="element-1b" class="primary p-1 my-3  border border-2 border-dark">element-1b</div>
+                  <div id="element-1b" class="primary p-1 my-3  border border-2 border-dark" >element-1b</div>
                 </div>
 
                 <div class="col-md-2 ">
@@ -598,7 +617,203 @@ Author: 1. Prakriti Dhang
               </div>
             </div>
           </div>
+        <!--/div-->
+
+      </div>
+ <!------------------------------------------------------- Part  3  sub part b------------------------------------------------------------>
+      <div class="card border border-2 border-success p-2" id="ex3b" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+           
+            <div class="col-md-4">
+          
         </div>
+        </div>
+        <br>
+          <div class="row">
+           
+            <div class="col-md-10">
+              <label for="table31b" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add object</label>
+              <form id="ftbl31b" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl31b" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object Name (Role)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp31b"></td>
+                        <td style="text-align: center;"><button id="t21addbtnb" class="btn btn-primary" type="button"
+                            onclick="addbtnt31b()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 3-->
+              </form>
+
+              <label for="table32b" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add message passed
+                between objects</label>
+              <form id="ftbl32b" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl32b" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> <select id="selectobjs3b" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" >
+                            <option value="0" selected>Select sender object</option>
+                          </select></td>
+                        <td>
+                          <select id="selectmsgtyp3b" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" >
+                            <option value="0" selected>Select message type</option>
+                            <option value="SYNC">Synchronous message</option>
+                            <option value="ASYNC">Asynchronous message</option>
+                            <option value="RESP">Response</option>
+
+                          </select>
+                        </td>
+                        <td><input class="form-control border-primary " type="text" id="inp32b"></td>
+                        <td>
+                          <select id="selectobjr3b" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example" >
+                            <option value="0" selected>Select receiver object</option>
+                          </select>
+                        </td>
+                        <td style="text-align: center;"><button id="t22addbtnb" class="btn btn-primary" type="button"
+                            onclick="addbtnt32b()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 2 responsive div ended for exercise 2-->
+              </form>
+
+              <label for="table33b" class="form-label fs-6" style=" font-weight: bold;">Table #3: </label>
+              <form id="ftbl33b" class="p-1 bg-white " action="">
+                <div class="table-responsive">
+                  <table id="tbl33b" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Object (Sender)</th>
+                      <th>Message Type</th>
+                      <th>Message</th>
+                      <th>Object (Receiver)</th>
+                      <th>Remove</th>
+                    </thead>
+                    <tbody id="tbodyt33b">
+
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 3 responsive div ended for exercise 2-->
+              </form>
+              <button id="drawbtn3b" class="btn btn-primary" type="button" onclick="drawbtnex3b()">
+                <i class="bi bi-pencil-fill"></i> Draw</button>
+            </div> <!-- Column  ended for exercise 3-->
+          </div> <!-- row  ended for exercise 3-->
+        </div> <!-- card body ended for exercise 3-->
+      </div> <!-- card  ended for exercise 3-->
+      <div id="dispuml3b" class="card border border-2 border-primary" style="display:none;">
+        <!--div class="card-body"-->
+          <div id="seq_diag_ex3b" style="display:none;">
+            <div class="container text-center text-dark">
+              <div class="row">
+                <div class="col-md-2 ">
+                  <div id="element-12a" class="primary p-1 my-3 border border-2 border-dark" >element-1a</div>
+
+                  <span id="element-clicka21" class="primary p-0 line "></span><br><br><br>
+                  <span id="element-clicka22" class="primary p-0  line"></span><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
+                  <div id="element-12b" class="primary p-1 my-3  border border-2 border-dark" >element-1b</div>
+                </div>
+
+                <div class="col-md-2 ">
+                  <div id="element-22a" class="primary p-1 my-3 border border-2 border-dark">element-2a</div>
+                  <span id="element-clickb21" class="primary p-0 line "></span><br>
+                  <span id="elehttpreq2" class="primary p-0 line "></span><br><br>
+                  <span id="element-clickb22" class="primary p-0  line"></span><br><br>
+
+                  <span id="elehttpreqa2" class="primary p-0 line "></span><br><br>
+                  <span id="elehttpres2" class="primary p-0  line"></span><br><br>
+
+                  <span id="eleupdate2a" class="primary p-0 line "></span><br>
+                  <span id="eleupdate22" class="primary p-0 line "></span><br><br><br><br><br>
+                 
+                  <span id="elehttpresa2" class="primary p-0 line "></span><br>
+                 
+                  <span id="eleup32" class="primary p-0 line "></span><br>
+                  <span id="eleup42" class="primary p-0 line "></span><br>
+                 
+                
+                
+
+                  <div id="element-22b" class="primary p-1 my-3  border border-2 border-dark">element-2b</div>
+                </div>
+
+                <div class="col-md-2 ">
+                  <div id="element-32a" class="primary p-1 my-3 border border-2 border-dark">element-3a</div><br>
+                 
+                  <span id="elehttpreq32" class="primary p-0 line "></span><br>
+                  <span id="eleret3a2" class="primary p-0  "></span><br><br><br>
+                 
+                  <span id="elehttpreq3a2" class="primary p-0  line"></span><br>
+                 
+                  <span id="eleres3b2" class="primary p-0 line "></span><br>
+                  <span id="elehttpres32" class="primary p-0  "></span><br><br><br><br><br><br>
+                 
+
+                
+                  <span id="eleret3c2" class="primary p-0  "></span><br>
+                  <span id="eleres3d2" class="primary p-0  "></span><br>
+                
+
+                  <span id="elehttpres3a2" class="primary p-0  "></span><br><br><br>
+                  <div id="element-32b" class="primary p-1 my-3  border border-2 border-dark">element-3b</div>
+                </div>
+
+
+                <!--div class="col-md-2 ">
+                  <div id="element-4a" class="primary p-1 my-3 border border-2 border-dark">element-4a</div><br><br>
+
+                  <span id="eleuid4" class="primary p-0  "></span><br><br>
+                  <span id="elelogin4"
+                    class="primary p-0  "></span><br><br><br><br><br><br><br>
+                  <div id="element-4b" class="primary p-1 my-3  border border-2 border-dark">element-4b</div>
+                </div-->
+
+
+                <div class="col-md-2 ">
+                  <div id="element-52a" class="primary p-1 my-3 border border-2 border-dark">element-5a</div>
+                  <br><br>
+
+                  <span id="eleret5a2" class="primary p-0  "></span><br><br><br><br>
+                  <span id="eleres5b2" class="primary p-0  "></span><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <div id="element-52b" class="primary p-1 my-3  border border-2 border-dark">element-5b</div>
+                </div>
+
+
+                <div class="col-md-2 ">
+                  <div id="element-62a" class="primary p-1 my-3 border border-2 border-dark">element-6a</div>
+                  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <span id="eleret6a2" class="primary p-0  "></span><br>
+                  <span id="eleres6b2" class="primary p-0  "></span><br><br><br><br>
+                  
+                  <div id="element-62b" class="primary p-1 my-3  border border-2 border-dark">element-6b</div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        <!--/div-->
 
       </div>
       <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
@@ -626,6 +841,14 @@ Author: 1. Prakriti Dhang
           <div style="font-size: medium;" id="show_result3" style=" display: none;">
 
             <img src="./images/solution-3.png" class="img-fluid" alt="sequence-diagram-solution">
+
+
+
+
+          </div>
+          <div style="font-size: medium;" id="show_result3b" style=" display: none;">
+
+            <img src="./images/solution-3b.png" class="img-fluid" alt="sequence-diagram-solution">
 
 
 
@@ -664,6 +887,7 @@ Author: 1. Prakriti Dhang
   <script src="./js/ex2.js"></script>
   <script src="./js/leader-line.js"></script>
   <script src="./js/ex3.js"></script>
+  <script src="./js/ex3b.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>

@@ -64,7 +64,7 @@ document.getElementById("inp31").value="";
 
 
  /*************************************Function for Table 2***********************************************/  
-
+ var line;
  var arrmesg3=[];
  function addbtnt32(){
   
@@ -157,6 +157,15 @@ document.getElementById("inp31").value="";
 
  if((objsval3.toLowerCase()=="user") && (objrval3.toLowerCase()=="web browser") && (mtval3 == "SYNC")){
   document.getElementById('tbodyt33').appendChild(newtr);
+ /* document.getElementById("element-1a").style.display="block";
+  document.getElementById("element-1b").style.display="block";
+  line= new LeaderLine(clicka, clickb, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left', hide:true,
+         
+          middleLabel: LeaderLine.captionLabel(arrmesg3[0], {color: 'black', offset: [0, 50]})
+          
+        });*/
+        
+  // line= new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind',hide: true});
  }
  else if((objsval3.toLowerCase()=="web browser") && (objrval3.toLowerCase()=="web server") && (mtval3 == "SYNC")){
   document.getElementById('tbodyt33').appendChild(newtr);
@@ -200,16 +209,19 @@ document.getElementById("inp31").value="";
     
 
 /***************************************************  Function for Draw UML **************************************************/
-     function drawbtnex3(){
+var ele1a, ele1b;
+var clicka, clickb;
+var line2;
+function drawbtnex3(){
 
 
 
         document.getElementById("dispuml3").style.display="block";
-
+        document.getElementById("seq_diag_ex3").style.display="block";
 
 
        
-        var ele1a = document.getElementById('element-1a'),
+       ele1a = document.getElementById('element-1a');
           ele1b = document.getElementById('element-1b');
         
           var ele2a = document.getElementById('element-2a'),
@@ -231,7 +243,7 @@ document.getElementById("inp31").value="";
         //  ele6b = document.getElementById('element-6b');
         
         
-          var clicka = document.getElementById('element-clicka'),
+           clicka = document.getElementById('element-clicka');
           clickb = document.getElementById('element-clickb');
         
      //     var clicka2 = document.getElementById('element-clicka2'),
@@ -287,6 +299,7 @@ document.getElementById("inp31").value="";
         
        /*************************************** Creating line stroke between the objects ***************************************/
         new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+       // line.show();
         new LeaderLine(ele2a, ele2b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         new LeaderLine(ele3a, ele3b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         new LeaderLine(ele4a, ele4b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
@@ -295,45 +308,49 @@ document.getElementById("inp31").value="";
         
         
         
-         new LeaderLine(clicka, clickb, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
+        line =new LeaderLine(clicka, clickb, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left', hide:true, animation: true,startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
-          middleLabel: LeaderLine.captionLabel(arrmesg3[0], {color: 'black', offset: [0, 50]})
+         middleLabel: LeaderLine.captionLabel(arrmesg3[0], {color: 'black', offset: [0, 50]})
           
-        });
+       });
+       line.show('draw'); 
         
-        new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
+     line2=  new LeaderLine(httpreq, httpreq3, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[1], {color: 'black', offset: [0, 50]})
         
       });
+      line2.show('draw'); 
 
-      new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
+      var line3= new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[2], {color: 'black', offset: [0, 50]})
         
       });
+      line3.show('draw'); 
       
-      new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
+      var line4= new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
        
         middleLabel: LeaderLine.captionLabel(arrmesg3[3], {color: 'black', offset: [0, 50]})
         
       });
+      line4.show('draw'); 
        
         
-        new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',
+      var line5=  new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[4], {color: 'black'})
           
         });
+        line5.show('draw'); 
         
         
-        
-        new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',
+        var line6= new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[5], {color: 'black', offset: [0, 50]})
           
         });
-        
+        line6.show('draw'); 
      /*
         new LeaderLine(clicka2, clickb2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',
          

@@ -17,11 +17,14 @@ function subex(){
         document.getElementById("ex3").style.display="none";  
         document.getElementById("para1").style.display="block";    
         document.getElementById("dispres").style.display="none";
+        document.getElementById("selectpart").style.display="none";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
         document.getElementById("show_result3").style.display="none";
+        document.getElementById("show_result3b").style.display="none";
         document.getElementById("dispuml2").style.display="none";
         document.getElementById("dispuml3").style.display="none";
+        document.getElementById("dispuml3b").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
        
@@ -36,11 +39,14 @@ function subex(){
       document.getElementById("ex3").style.display="none";  
       document.getElementById("dispres").style.display="none";
       document.getElementById("para1").style.display="block";
+      document.getElementById("selectpart").style.display="none";
       document.getElementById("show_result1").style.display="none";
       document.getElementById("show_result2").style.display="none";
       document.getElementById("show_result3").style.display="none";
+      document.getElementById("show_result3b").style.display="none";
       document.getElementById("dispuml1").style.display="none";
       document.getElementById("dispuml3").style.display="none";
+      document.getElementById("dispuml3b").style.display="none";
       document.getElementById("dispviewbtn").disabled=false;
       document.getElementById("viewsol").disabled=true;
     
@@ -55,9 +61,11 @@ function subex(){
     document.getElementById("ex2").style.display="none"; 
     document.getElementById("dispres").style.display="none";
     document.getElementById("para1").style.display="block";
+    document.getElementById("selectpart").style.display="block";
     document.getElementById("show_result1").style.display="none";
     document.getElementById("show_result2").style.display="none";
     document.getElementById("show_result3").style.display="none";
+    document.getElementById("show_result3b").style.display="none";
     document.getElementById("dispuml2").style.display="none";
     document.getElementById("dispuml1").style.display="none";
     document.getElementById("dispviewbtn").disabled=false;
@@ -75,12 +83,17 @@ function subex(){
         document.getElementById("ex3").style.display="none";
         document.getElementById("dispres").style.display="none";
         document.getElementById("para1").style.display="none";
+        document.getElementById("selectpart").style.display="none";
         document.getElementById("show_result1").style.display="none";
         document.getElementById("show_result2").style.display="none";
         document.getElementById("show_result3").style.display="none";
+        document.getElementById("show_result3b").style.display="none";
+        document.getElementById("seq_diag_ex3b").style.display="none";
+        document.getElementById("seq_diag_ex3a").style.display="none";
         document.getElementById("dispuml1").style.display="none";
         document.getElementById("dispuml2").style.display="none";
         document.getElementById("dispuml3").style.display="none";
+        document.getElementById("dispuml3b").style.display="none";
         document.getElementById("dispviewbtn").disabled=true;
         document.getElementById("viewsol").disabled=true;
        
@@ -112,6 +125,7 @@ function solview(){
   document.getElementById("show_result1").style.display="block";
   document.getElementById("show_result2").style.display="none";
   document.getElementById("show_result3").style.display="none";
+  document.getElementById("show_result3b").style.display="none";
   document.getElementById("viewsol").disabled=true;
   
 }
@@ -120,16 +134,32 @@ if(ex.options[ex.selectedIndex].value==2){
   document.getElementById("show_result2").style.display="block";
   document.getElementById("show_result1").style.display="none";
   document.getElementById("show_result3").style.display="none";
+  document.getElementById("show_result3b").style.display="none";
  
   document.getElementById("viewsol").disabled=true;
   
 }
-if(ex.options[ex.selectedIndex].value==3){
+if((ex.options[ex.selectedIndex].value==3)&&(part.options[part.selectedIndex].value==1)){
   document.getElementById("dispres").style.display="block";
   document.getElementById("show_result3").style.display="block";
   document.getElementById("show_result1").style.display="none";
   document.getElementById("show_result2").style.display="none";
+  document.getElementById("show_result3b").style.display="none";
+  document.getElementById("dispuml3b").style.display="none";
   document.getElementById("viewsol").disabled=true;
+  
+  
+}
+
+if((ex.options[ex.selectedIndex].value==3)&&(part.options[part.selectedIndex].value==2)){
+  document.getElementById("dispres").style.display="block";
+  document.getElementById("show_result3").style.display="none";
+  document.getElementById("show_result1").style.display="none";
+  document.getElementById("show_result2").style.display="none";
+  document.getElementById("show_result3b").style.display="block";
+  document.getElementById("dispuml3").style.display="none";
+  document.getElementById("viewsol").disabled=true;
+  
   
   
 }
@@ -137,5 +167,34 @@ if(ex.options[ex.selectedIndex].value==3){
 }
  
 
+var part= document.getElementById("selectpart"); 
+function subpart(){
+  if(part.options[part.selectedIndex].value==1){
+    document.getElementById("ex3").style.display="block";
+    document.getElementById("ex3b").style.display="none";
+   // document.getElementById("dispuml3").style.display="block";
+    document.getElementById("dispuml3b").style.display="none";
+    document.getElementById("dispres").style.display="none";
+    document.getElementById("seq_diag_ex3b").style.display="none";
+    document.getElementById("show_result3").style.display="none";
+    document.getElementById("show_result3b").style.display="none";
+    document.getElementById("dispviewbtn").disabled=false;
+    document.getElementById("viewsol").disabled=false;
+  }
 
+  if(part.options[part.selectedIndex].value==2){
+    document.getElementById("ex3b").style.display="block";
+    document.getElementById("ex3").style.display="none";
+    document.getElementById("dispuml3").style.display="none";
+   // document.getElementById("dispuml3b").style.display="block";
+   document.getElementById("seq_diag_ex3").style.display="none";
+    document.getElementById("dispres").style.display="none";
+    document.getElementById("show_result3").style.display="none";
+    document.getElementById("show_result3b").style.display="none";
+    document.getElementById("dispviewbtn").disabled=false;
+    document.getElementById("viewsol").disabled=false;
+  }
+  
 
+  
+}
