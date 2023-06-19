@@ -186,7 +186,7 @@ document.getElementById("inp31").value="";
   document.getElementById('tbodyt33').appendChild(newtr);
  }
  else{
-  alert("Not possible between " +objsval3 +" and " +objrval3 );
+  alert("Message passing is not possible between " +objsval3 +" and " +objrval3 );
  }
  //document.getElementById('tbodyt33').appendChild(newtr);
  

@@ -19,7 +19,7 @@ if(inpt21 == ""){
 
 else{
 
-    arrsr.push(inpt21);
+   // arrsr.push(inpt21);
  /******* Creating options in table 2********/
  let newOptionIDt2a;
  newOptionIDt2a = 'newOptiont2a_' + inpt21;
@@ -59,6 +59,7 @@ document.getElementById("inp21").value="";
 
  /*************************************Function for Table 2***********************************************/  
  var arrmesg=[];
+ var arrobjex2=[];
 function addbtnt22(){
  
  var selobjs= document.getElementById("selectobjs");
@@ -97,7 +98,8 @@ function addbtnt22(){
 
   
   else  {
-
+    arrsr.push(objsval);
+    arrobjex2= [...new Set(arrsr)];
     arrmesg.push(inpt22);
     let newtr =document.createElement("tr");
     let newtdIDs= "objs"+objsval;
@@ -146,8 +148,20 @@ newtr.appendChild(newtdmt);
 newtr.appendChild(newtdm);
 newtr.appendChild(newtdr);
 newtr.appendChild(newtdbtn);
-document.getElementById('tbodyt23').appendChild(newtr);
 
+if((objsval.toLowerCase()=="client") && (objrval.toLowerCase()=="server") && (mtval == "SYNC")){
+document.getElementById('tbodyt23').appendChild(newtr);
+}
+else if((objsval.toLowerCase()=="server") && (objrval.toLowerCase()=="client") && (mtval == "SYNC")){
+    document.getElementById('tbodyt23').appendChild(newtr);
+}
+else if((objsval.toLowerCase()=="client") && (objrval.toLowerCase()=="server") && (mtval == "SYNC"))
+{
+    document.getElementById('tbodyt23').appendChild(newtr);
+}
+else{
+    alert("Message passing is not possible between " +objsval +" and " +objrval );
+}
 }
 
 }
@@ -159,7 +173,7 @@ document.getElementById('tbodyt23').appendChild(newtr);
 function removerow(btndel) {
     if (typeof(btndel) == "object") {
         $(btndel).closest("tr").remove();
-        
+        arrmesg.pop();
     } 
    
   
@@ -202,7 +216,7 @@ function drawbtnex2(){
                 //stroke:'#B90000'
             },
             label: {
-                text: arrsr[0],
+                text: arrobjex2[0],
                 fill: 'black',
                 fontSize: 16
             }
@@ -222,7 +236,7 @@ function drawbtnex2(){
                 //stroke:'#B90000'
             },
             label: {
-                text: arrsr[0],
+                text: arrobjex2[0],
                 fill: 'black',
                 fontSize: 16
             }
@@ -243,7 +257,7 @@ function drawbtnex2(){
                 //stroke:'#B90000'
             },
             label: {
-                text: arrsr[1],
+                text: arrobjex2[1],
                 fill: 'black',
                 fontSize: 16
             }
@@ -264,7 +278,7 @@ function drawbtnex2(){
                // stroke:'#B90000'
             },
             label: {
-                text: arrsr[1],
+                text: arrobjex2[1],
                 fill: 'black',
                 fontSize: 16
             }

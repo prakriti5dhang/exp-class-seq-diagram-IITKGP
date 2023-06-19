@@ -206,7 +206,7 @@ document.getElementById("inp31b").value="";
 
 
  else{
-  alert("Not possible between " +objsval3b +" and " +objrval3b );
+  alert("Message passing is not possible between " +objsval3b +" and " +objrval3b );
  }
  //document.getElementById('tbodyt33').appendChild(newtr);
  
