@@ -211,7 +211,8 @@ document.getElementById("inp31").value="";
 /***************************************************  Function for Draw UML **************************************************/
 var ele1a, ele1b;
 var clicka, clickb;
-var line2;
+var link1, link2, link3, link4;
+var line2, line3, line4, line5, line6;
 function drawbtnex3(){
 
 
@@ -298,11 +299,17 @@ function drawbtnex3(){
         
         
        /*************************************** Creating line stroke between the objects ***************************************/
-        new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-       // line.show();
-        new LeaderLine(ele2a, ele2b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele3a, ele3b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele4a, ele4b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+       link1=  new LeaderLine(ele1a, ele1b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link1.show();
+
+       link2=  new LeaderLine(ele2a, ele2b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link2.show();
+
+       link3=  new LeaderLine(ele3a, ele3b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link3.show();
+       
+       link4=  new LeaderLine(ele4a, ele4b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link4.show();
         //new LeaderLine(ele5a, ele5b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         //new LeaderLine(ele6a, ele6b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
         
@@ -322,14 +329,14 @@ function drawbtnex3(){
       });
       line2.show('draw'); 
 
-      var line3= new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+       line3= new LeaderLine(eleuid, eleuid4, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3[2], {color: 'black', offset: [0, 50]})
         
       });
       line3.show('draw'); 
       
-      var line4= new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+      line4= new LeaderLine(elelogin4, elelogin, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
        
         middleLabel: LeaderLine.captionLabel(arrmesg3[3], {color: 'black', offset: [0, 50]})
         
@@ -337,7 +344,7 @@ function drawbtnex3(){
       line4.show('draw'); 
        
         
-      var line5=  new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+       line5=  new LeaderLine(httpres3, httpres, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[4], {color: 'black'})
           
@@ -345,7 +352,7 @@ function drawbtnex3(){
         line5.show('draw'); 
         
         
-        var line6= new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+        line6= new LeaderLine(upd, upd2, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right',hide:true, startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3[5], {color: 'black', offset: [0, 50]})
           

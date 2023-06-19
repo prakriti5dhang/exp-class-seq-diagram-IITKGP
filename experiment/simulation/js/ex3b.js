@@ -231,6 +231,8 @@ document.getElementById("inp31b").value="";
 /***************************************************  Function for Draw UML **************************************************/
 var ele12a, ele12b;
 var click2a, click2b;
+var link2a, link2b,link2c, link2d, link2e;
+var line2a,line2b,line2c,line2d,line2e,line2f,line2g,line2h,line2i,line2j,line2k,line2l;
 function drawbtnex3b(){
 
   
@@ -309,100 +311,110 @@ function drawbtnex3b(){
         
         
        /*************************************** Creating line stroke between the objects ***************************************/
-        new LeaderLine(ele12a, ele12b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-       // line.show();
-        new LeaderLine(ele22a, ele22b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele32a, ele32b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        //new LeaderLine(ele42a, ele42b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele52a, ele52b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
-        new LeaderLine(ele62a, ele62b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+      link2a=  new LeaderLine(ele12a, ele12b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+      link2a.show();
+
+      link2b=  new LeaderLine(ele22a, ele22b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link2b.show();
+
+      link2c=   new LeaderLine(ele32a, ele32b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+       link2c.show(); 
+
+       //new LeaderLine(ele42a, ele42b, {color: 'black', size: 2, dash: true, endPlug:'behind'});
+        link2d=   new LeaderLine(ele52a, ele52b, {color: 'black', size: 2, dash: true, hide:true,endPlug:'behind'});
+        link2d.show();
+
+        link2e=   new LeaderLine(ele62a, ele62b, {color: 'black', size: 2, dash: true, hide:true, endPlug:'behind'});
+        link2e.show();
         
         
         
-       new LeaderLine(click2a, click2b, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',  startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+     line2a=  new LeaderLine(click2a, click2b, {color: 'black', size: 2, startSocket: 'right', hide:true, endSocket: 'left',  startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
          middleLabel: LeaderLine.captionLabel(arrmesg3b[0], {color: 'black', offset: [0, 50]})
           
        });
-      // line.show('draw'); 
+       line2a.show('draw'); 
         
-  new LeaderLine(httpreq2, httpreq32, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow2', endPlugSize: 2,
+      line2b=   new LeaderLine(httpreq2, httpreq32, {color: 'black', size: 2, startSocket: 'right', hide:true, endSocket: 'left', startPlug: 'behind', endPlug: 'arrow2', endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3b[1], {color: 'black', offset: [0, 50]})
         
       });
-    //  line2.show('draw'); 
+      line2b.show('draw');
 
       
-      new LeaderLine(eleret3a2, eleret5a2, {color: 'black', size: 2,  startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+    line2c=   new LeaderLine(eleret3a2, eleret5a2, {color: 'black', size: 2, hide:true, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3b[2], {color: 'black', offset: [0, 50]})
           
         });
+        line2c.show('draw');
 
-        new LeaderLine(clicka22, clickb22, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+        line2d=    new LeaderLine(clicka22, clickb22, {color: 'black', size: 2, hide:true, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3b[0], {color: 'black', offset: [0, 50]})
         
       });
+      line2d.show('draw');
 
-
-      new LeaderLine(elehttpreqa2, elehttpreq3a2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left',startPlug: 'behind', endPlug: 'arrow2', endPlugSize: 2,
+      line2e=   new LeaderLine(elehttpreqa2, elehttpreq3a2, {color: 'black', size: 2, hide:true, startSocket: 'right', endSocket: 'left',startPlug: 'behind', endPlug: 'arrow2', endPlugSize: 2,
        
       middleLabel: LeaderLine.captionLabel(arrmesg3b[1], {color: 'black', offset: [0, 50]})
       
     });
+    line2e.show('draw');
 
-    new LeaderLine(eleres5b2, eleres3b2, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+    line2f=  new LeaderLine(eleres5b2, eleres3b2, {color: 'black', size: 2, dash:true, hide:true, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
     middleLabel: LeaderLine.captionLabel(arrmesg3b[3], {color: 'black', offset: [0, 50]})
     
   });
-        
-      new LeaderLine(httpres32, httpres2, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+  line2f.show('draw');
+  line2g=   new LeaderLine(httpres32, httpres2, {color: 'black', size: 2, dash:true, hide:true, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3b[4], {color: 'black'})
           
         });
-       // line5.show('draw'); 
+        line2g.show('draw');  
         
-        
-     new LeaderLine(upd2a, upd22, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+       line2h=  new LeaderLine(upd2a, upd22, {color: 'black', size: 2, path: 'grid',hide:true,  startSocket: 'right', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3b[5], {color: 'black', offset: [0, 50]})
           
         });
 
-     
+        line2h.show('draw');
        
-        new LeaderLine(eleret3c2, eleret6a2, {color: 'black', size: 2, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
+        line2i=      new LeaderLine(eleret3c2, eleret6a2, {color: 'black', size: 2,hide:true, startSocket: 'right', endSocket: 'left', startPlug: 'behind', endPlug: 'arrow3',endPlugSize: 2,
          
         middleLabel: LeaderLine.captionLabel(arrmesg3b[6], {color: 'black', offset: [0, 50]})
         
       });
+      line2i.show('draw');
       
-      new LeaderLine(eleres6b2, eleres3d2, {color: 'black', size: 2, dash:true, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+      line2j=   new LeaderLine(eleres6b2, eleres3d2, {color: 'black', size: 2, dash:true, hide:true,startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
        
         middleLabel: LeaderLine.captionLabel(arrmesg3b[7], {color: 'black', offset: [0, 50]})
         
       });
-      
+      line2j.show('draw');
         
-        new LeaderLine(elehttpres3a2, elehttpresa2, {color: 'black', size: 2, startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+      line2k=   new LeaderLine(elehttpres3a2, elehttpresa2, {color: 'black', size: 2, hide:true,startSocket: 'left', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3b[8], {color: 'black', offset: [0, 50]})
           
         });
         
-        
+        line2k.show('draw');
          
-        new LeaderLine(eleup32, eleup42, {color: 'black', size: 2, path: 'grid', startSocket: 'right', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
+        line2l=   new LeaderLine(eleup32, eleup42, {color: 'black', size: 2, path: 'grid',hide:true, startSocket: 'right', endSocket: 'right', startPlug: 'behind', endPlug: 'arrow3', endPlugSize: 2,
          
           middleLabel: LeaderLine.captionLabel(arrmesg3b[9], {color: 'black', offset: [0, 50]})
           
         });
        
-        
+        line2l.show('draw');
        
         /*
        
